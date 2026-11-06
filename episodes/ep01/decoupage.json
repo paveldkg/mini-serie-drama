@@ -69,7 +69,7 @@
       "clip": "couloir-porte-entree.jpg",
       "duree": 2.0,
       "fonction": "tension",
-      "action": "Jour. Couloir et porte d'entrée : Mademoiselle Mangue arrive avec sa petite valise.",
+      "action": "Jour. Couloir réel : au fond, devant la porte d'entrée, Mademoiselle Mangue arrive avec sa petite valise.",
       "cadrage": "plan large du couloir réel",
       "zoom": "in",
       "texte": "Plus tôt…",
@@ -77,12 +77,12 @@
       "son": "thème de la série démarre, roulettes de valise",
       "personnage_incruste": {
         "image": "assets/personnages/mangue-arrivee.png",
-        "taille": 0.295,
+        "taille": 0.147,
         "position": [
-          0.52,
-          0.62
+          0.6,
+          0.585
         ],
-        "hauteur_ecran": 0.3
+        "hauteur_ecran": 0.15
       }
     },
     {

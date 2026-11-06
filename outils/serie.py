@@ -348,9 +348,14 @@ def cmd_plans(a):
             d1 = min(dur, d0 + float(r.get("duree_estimee", dur)))
             bob = f"if(between(t,{d0:.2f},{d1:.2f}),14*abs(sin(2*PI*3.1*t)),3*sin(2*PI*0.6*t))" if inc.get("anime", True) else "0"
             sil = ",lutrgb=r=12:g=16:b=22" if inc.get("silhouette") else ""  # silhouette noire, contour conservé par l'alpha
-            cmd += ["-loop", "1", "-i", img, "-filter_complex",
-                    f"[0:v]{vf}[b];[1:v]scale={tw}:-1,format=rgba{sil}[c];[b][c]overlay=x='{W * px:.0f}-w/2':y='{H * py:.0f}-h-({bob})':shortest=1,format=yuv420p[v]",
-                    "-map", "[v]"]
+            ox, oy = f"{W * px:.0f}-w/2", f"{H * py:.0f}-h-({bob})"
+            if inc.get("ombre", not inc.get("silhouette")):  # ombre portée douce : le fruit « pose » sur le meuble réel
+                graphe = (f"[0:v]{vf}[b];[1:v]scale={tw}:-1,format=rgba{sil},split[c][cs];"
+                          f"[cs]colorchannelmixer=rr=0:gg=0:bb=0:aa=0.42,boxblur=10:2[sh];"
+                          f"[b][sh]overlay=x='{ox}+14':y='{oy}+10':shortest=1[b2];[b2][c]overlay=x='{ox}':y='{oy}':shortest=1,format=yuv420p[v]")
+            else:
+                graphe = f"[0:v]{vf}[b];[1:v]scale={tw}:-1,format=rgba{sil}[c];[b][c]overlay=x='{ox}':y='{oy}':shortest=1,format=yuv420p[v]"
+            cmd += ["-loop", "1", "-i", img, "-filter_complex", graphe, "-map", "[v]"]
         else:
             cmd += ["-vf", vf + ",format=yuv420p"]
         sortie = os.path.join(a.o, f"S{plans_de(d).index(p) + 1}.mp4")
