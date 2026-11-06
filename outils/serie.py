@@ -304,6 +304,12 @@ def cmd_voix(a):
 
 
 # ------------------------------------------------------------------ plans
+ETALONNAGES = {  # étalonnage colorimétrique seulement (pas de retouche du décor)
+    "nuit": ",eq=brightness=-0.20:contrast=1.12:saturation=0.55:gamma=0.85,colorbalance=bs=0.18:bm=0.08:bh=0.05:rs=-0.06,vignette=PI/4",
+    "tension": ",eq=contrast=1.08:saturation=0.85,vignette=PI/5",
+}
+
+
 def cmd_plans(a):
     need()
     d = charger(a.decoupage)
@@ -321,10 +327,16 @@ def cmd_plans(a):
         nfr = max(1, int(round(dur * FPS)))
         zexpr = {"in": f"1+{amp}*on/{nfr}", "out": f"1+{amp}*(1-on/{nfr})"}.get(z, "1")
         image = f.lower().endswith((".png", ".jpg", ".jpeg", ".webp"))
+        cadre = ""
+        if p.get("cadre"):  # [cx, cy, largeur] en fractions de la source : gros plan sur un détail réel (pas de retouche)
+            cx, cy, lg = p["cadre"]
+            cadre = (f"crop=w='trunc(min(iw*{lg},ih*9/16)/2)*2':h='trunc(min(iw*{lg},ih*9/16)*16/9/2)*2':"
+                     f"x='max(0,min(iw-ow,iw*{cx}-ow/2))':y='max(0,min(ih-oh,ih*{cy}-oh/2))',")
         entree = (["-loop", "1", "-t", f"{dur + 0.5:.3f}", "-i", f] if image else ["-ss", f"{float(p.get('debut', 0)):.3f}", "-i", f])
-        vf = (f"fps={FPS},scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase:flags=bicubic,crop={W * 2}:{H * 2}:(iw-ow)*{fx}:(ih-oh)*{fy},"
+        vf = (f"fps={FPS},{cadre}scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase:flags=bicubic,crop={W * 2}:{H * 2}:(iw-ow)*{fx}:(ih-oh)*{fy},"
               f"zoompan=z='{zexpr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},"
               f"tpad=stop_mode=clone:stop_duration={dur + 0.6:.3f},trim=duration={dur + 0.6:.3f},setpts=PTS-STARTPTS,setsar=1")
+        vf += ETALONNAGES.get(p.get("etalonnage", ""), "")  # couleur seulement : le décor réel n'est jamais modifié
         inc = p.get("personnage_incruste")
         cmd = ["ffmpeg", "-y", "-v", "error"] + entree
         if inc:
@@ -334,9 +346,10 @@ def cmd_plans(a):
             r = p.get("replique") or {}
             d0 = float(r.get("decalage", 0.15))
             d1 = min(dur, d0 + float(r.get("duree_estimee", dur)))
-            bob = f"if(between(t,{d0:.2f},{d1:.2f}),14*abs(sin(2*PI*3.1*t)),3*sin(2*PI*0.6*t))"
+            bob = f"if(between(t,{d0:.2f},{d1:.2f}),14*abs(sin(2*PI*3.1*t)),3*sin(2*PI*0.6*t))" if inc.get("anime", True) else "0"
+            sil = ",lutrgb=r=12:g=16:b=22" if inc.get("silhouette") else ""  # silhouette noire, contour conservé par l'alpha
             cmd += ["-loop", "1", "-i", img, "-filter_complex",
-                    f"[0:v]{vf}[b];[1:v]scale={tw}:-1,format=rgba[c];[b][c]overlay=x='{W * px:.0f}-w/2':y='{H * py:.0f}-h-({bob})':shortest=1,format=yuv420p[v]",
+                    f"[0:v]{vf}[b];[1:v]scale={tw}:-1,format=rgba{sil}[c];[b][c]overlay=x='{W * px:.0f}-w/2':y='{H * py:.0f}-h-({bob})':shortest=1,format=yuv420p[v]",
                     "-map", "[v]"]
         else:
             cmd += ["-vf", vf + ",format=yuv420p"]
@@ -363,10 +376,16 @@ def cmd_projet(a):
         r = p.get("replique") or {}
         sc = {"id": f"S{i}", "duree": round(float(p["duree"]), 3), "fonction": FONCTION_V4K.get(p.get("fonction", ""), "ambiance"),
               "action": p.get("action", ""), "plan": p.get("cadrage", "plan vertical"), "mouvement": f"zoom léger {p.get('zoom', 'in')}",
-              "source": "generation" if p.get("genere") else "client", "statut_media": "disponible", "transition": p.get("transition", "coupe"),
+              "source": p.get("source") or ("generation" if p.get("genere") else "client"), "statut_media": "disponible", "transition": p.get("transition", "coupe"),
               "son": p.get("son", "")}
         if i == 1 and d.get("hook", {}).get("texte"):
             sc["texte_ecran"] = d["hook"]["texte"]
+        elif p.get("texte"):
+            sc["texte_ecran"] = p["texte"]
+        if p.get("faits_utilises"):
+            sc["faits_utilises"] = p["faits_utilises"]
+        if p.get("focus"):
+            sc["cadrage_focus"] = p["focus"]
         if r.get("texte"):
             sc["voix_off"] = r["texte"]
         if p.get("genere"):
@@ -374,7 +393,7 @@ def cmd_projet(a):
             sc["represente_entreprise_reelle"] = False
         scenes.append(sc)
     scenes[-1]["fonction"] = "cta"
-    lien = next((f for f in b.get("faits", []) if f.get("id") == "LIEN_BIO"), {})
+    lien = next((f for f in b.get("faits", []) if f.get("id") == d.get("cta_fait", "LIEN_BIO")), {})
     projet = {
         "projet": {"id": f"{ep.get('date', '')}-dkg-{s.get('slug', 'serie')}-ep{ep.get('numero', 0)}", "client": s.get("marque", "DKG Guest House"), "langue": "fr-CA", "version": 1},
         "brief": {"entreprise": s.get("entreprise", "DKG Guest House — appartements meublés à Douala"), "secteur": "immobilier-location-meublee",
@@ -388,10 +407,11 @@ def cmd_projet(a):
         "faits": b.get("faits", []),
         "direction_artistique": {"idee": s.get("pitch", ""), "style": s.get("style", ""), "emotion": "suspense, curiosité", "palette": s.get("palette", ["#111418", "#FFFFFF", "#E2B868"]),
                                  "rythme": "plans de 1 à 3 s, coupes calées sur le tempo", "transitions": "coupes sèches, fondu au noir avant la carte finale",
-                                 "typo": {"famille": s.get("police", "Montserrat")}, "musique": d.get("musique", {"statut": "a_trouver"}), "logo": {"statut": "aucun"}},
+                                 "typo": {"famille": s.get("police", "Montserrat")}, "musique": d.get("musique", {"statut": "a_trouver"}), "logo": s.get("logo", {"statut": "aucun"})},
         "formats": [{"nom": "vertical", "ratio": "9:16", "resolution_cible": "1080x1920", "usage": "TikTok, Reels"}],
         "voix_off": {"active": any((p.get("replique") or {}).get("texte") for p in pl), "voix": "voix des personnages (bible)", "outil": "Higgsfield", "statut": d.get("statut_voix", "a_generer")},
-        "cta": {"texte": d.get("cliffhanger", {}).get("texte", "À suivre…"), "coordonnees": d.get("cta", "Lien en bio pour réserver ton séjour DKG"),
+        "cta": {"texte": d.get("carte_finale", {}).get("texte") or d.get("cliffhanger", {}).get("texte", "À suivre…"),
+                "coordonnees": d.get("carte_finale", {}).get("sous_texte") or d.get("cta", "Lien en bio pour réserver ton séjour DKG"),
                 "statut": "verifie" if lien.get("statut") == "verifie" else "a_fournir"},
         "mention_images_illustratives": "Personnages générés par IA" if any(p.get("genere") or p.get("personnage_incruste") for p in pl) else "",
         "scenes": scenes,

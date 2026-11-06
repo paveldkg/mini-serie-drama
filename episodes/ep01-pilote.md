@@ -1,3 +1,5 @@
+> **Remplacé** le 2026-11-06 par le pilote révisé : `episodes/ep01/decoupage.json` (plan seconde par seconde : `episodes/ep01/plan.md`). Ce fichier est conservé pour l'historique ; ne pas reprendre ses mentions « wifi », « cuisine équipée » ni le plan d'extérieur (non vérifiés ou non fournis).
+
 # Épisode 1 (pilote) — « La clé de trop »
 
 **Durée cible** : 40 s · **Format** : 9:16 · **Langue** : français (voix off + sous-titres)

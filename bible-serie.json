@@ -1,0 +1,139 @@
+{
+  "version": 2,
+  "mise_a_jour": "2026-11-06",
+  "serie": {
+    "titre": "La Clé de Trop",
+    "label": "DKG Stories",
+    "slug": "la-cle-de-trop",
+    "marque": "DKG Guest House",
+    "entreprise": "DKG Guest House — appartements meublés à Douala",
+    "offre": "Séjours en appartements meublés DKG, demande de réservation sur dkgguesthouse.com",
+    "pitch": "Dans un appartement DKG à Douala, Mademoiselle Mangue découvre qu'un ancien client, Monsieur Ananas, a peut-être gardé une clé. Bana la concierge et Petit Safou mènent l'enquête, pièce après pièce.",
+    "ton": "drame / mystère, premium, jamais enfantin",
+    "style": "Fruits en 3D premium style long métrage, incrustés sur les VRAIES photos de l'appartement DKG ; étalonnage chaud le jour, bleu nuit pour le mystère.",
+    "palette": ["#111418", "#FFFFFF", "#FF3130"],
+    "accent_justification": "Rouge du logo DKG (échantillonné : #FF3130) : une seule couleur d'accent, qui sert aussi le suspense.",
+    "police": "Montserrat ExtraBold (sous-titres et textes)",
+    "duree_cible_s": [30, 45],
+    "format": "9:16 1080x1920, 30 i/s, -14 LUFS",
+    "cta": "Réserve ton séjour sur dkgguesthouse.com",
+    "cta_secondaire": "Lien en bio (quand le compte TikTok sera connecté et le lien en bio vérifié)",
+    "cible": "Adultes voyageurs (affaires, diaspora, familles en visite) qui cherchent un logement meublé à Douala ; pas de ciblage des moins de 13 ans",
+    "promesse": "Un appartement meublé DKG, tel qu'il est vraiment, à réserver sur dkgguesthouse.com",
+    "benefice": "Voir les vraies pièces avant de réserver, au fil d'une intrigue",
+    "objections": ["Est-ce que l'appartement ressemble aux photos ? (réponse : décors 100 % réels)", "Comment réserver ? (réponse : demande sur dkgguesthouse.com, confirmation sur WhatsApp)"],
+    "logo": {"statut": "fourni_client", "fichier": "assets/logo/dkg-guest-house.png", "note": "Version sans fond attendue ; d'ici là, carte finale sur fond #191919 (identique au fond du logo)."},
+    "regles": [
+      "Décors : toujours les vraies photos DKG (assets/decor-photos/). Seuls les fruits (et une feuille d'ananas, partie du personnage) sont générés.",
+      "Étalonnage autorisé (couleur, lumière de nuit), jamais de retouche des meubles, murs, vue ou équipements.",
+      "Aucun équipement, prix, quartier ou disponibilité annoncé sans fait « verifie » ci-dessous.",
+      "Carte finale : logo DKG, « À suivre… », « Réserve ton séjour sur dkgguesthouse.com », « Personnages générés par IA ».",
+      "Étiquette TikTok « contenu généré par IA » activée à chaque publication.",
+      "Voix : voix prédéfinies Higgsfield, voice_id figés après validation, jamais de clonage.",
+      "Une police, une couleur d'accent (#FF3130), coupes sèches, un fondu au noir avant la carte finale, aucun émoji à l'écran.",
+      "Aucune dépense ni publication sans l'accord explicite de Pavel."
+    ]
+  },
+  "personnages": [
+    {
+      "id": "bana",
+      "nom": "Bana",
+      "fruit": "banane",
+      "role": "Concierge de l'appartement, narratrice ; fait la visite et connaît tous les secrets.",
+      "caractere": "Chaleureuse, rapide, un peu commère, rassurante mais vite paniquée.",
+      "parler": "Confidences chuchotées (« Psst… »), phrases courtes, humour léger. Signature : « Chez DKG, rien ne m'échappe… enfin, presque. »",
+      "apparence": "Banane jaune mûre, petites taches brunes, gilet de concierge bleu marine, épingle clé dorée, trousseau de clés doré. Voir prompts/personnages.md.",
+      "image_ref": {"job_id": "a90ee988-44fd-45cc-b6a7-2d1222e9ba66", "modele": "nano_banana_2", "statut": "valide"},
+      "poses_sans_fond": [
+        {"id": "bana-chuchote", "usage": "hook, carte finale", "fichier": "assets/personnages/bana-chuchote.png", "statut": "a_generer"},
+        {"id": "bana-visite", "usage": "visite des pièces (geste de présentation)", "fichier": "assets/personnages/bana-visite.png", "statut": "a_generer"},
+        {"id": "bana-choquee", "usage": "réaction à l'indice", "fichier": "assets/personnages/bana-choquee.png", "statut": "a_generer"}
+      ],
+      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "féminine, chaleureuse, rapide, expressive, pointe d'humour", "statut": "a_choisir"}
+    },
+    {
+      "id": "mangue",
+      "nom": "Mademoiselle Mangue",
+      "fruit": "mangue",
+      "role": "La nouvelle cliente ; ses réactions mettent l'appartement en valeur.",
+      "caractere": "Glamour, exigeante, théâtrale, un brin snob, vulnérable quand elle a peur.",
+      "parler": "Posée, dramatique, appuie les mots. Signature : « Je ne dors que dans le premium, chérie. »",
+      "apparence": "Mangue dégradée vert-orange-rouge, longs cils, lunettes de soleil sur la tête, foulard wax orange et turquoise, petite valise crème. Voir prompts/personnages.md.",
+      "image_ref": {"job_id": "9ca202de-5141-4b77-9c36-3c895fbddcec", "modele": "nano_banana_2", "statut": "valide"},
+      "poses_sans_fond": [
+        {"id": "mangue-arrivee", "usage": "arrivée avec valise, émerveillée", "fichier": "assets/personnages/mangue-arrivee.png", "statut": "a_generer"},
+        {"id": "mangue-inquiete", "usage": "indice, « J'ai la seule clé… non ? »", "fichier": "assets/personnages/mangue-inquiete.png", "statut": "a_generer"}
+      ],
+      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "féminine, posée, théâtrale, un brin snob", "statut": "a_choisir"}
+    },
+    {
+      "id": "ananas",
+      "nom": "Monsieur Ananas",
+      "fruit": "ananas",
+      "role": "Ancien client mystérieux, fil rouge de la série ; révélé à l'épisode 6 : il a tant aimé son séjour qu'il a voulu revenir.",
+      "caractere": "Élégant, énigmatique, ambigu (ni méchant ni gentil jusqu'à la révélation).",
+      "parler": "Grave, lent, velouté, presque chuchoté. Signature : « Certaines clés… ne se rendent jamais. »",
+      "apparence": "Ananas, couronne verte en pointes, yeux dorés en amande, demi-sourire, blazer anthracite, fine chaîne dorée, vieille clé en laiton. Voir prompts/personnages.md.",
+      "image_ref": {"job_id": "6ff5dd4c-c716-424d-9d59-8002523db032", "modele": "nano_banana_2", "statut": "valide"},
+      "poses_sans_fond": [
+        {"id": "ananas-profil", "usage": "silhouette devant la baie vitrée (noircie au montage) ; plus tard visage révélé", "fichier": "assets/personnages/ananas-profil.png", "statut": "a_generer"},
+        {"id": "feuille-ananas", "usage": "indice sur l'oreiller (accessoire du personnage)", "fichier": "assets/personnages/feuille-ananas.png", "statut": "a_generer"}
+      ],
+      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "masculine, grave, lente, veloutée, presque chuchotée", "statut": "a_choisir"}
+    },
+    {
+      "id": "safou",
+      "nom": "Petit Safou",
+      "fruit": "safou (prune africaine)",
+      "role": "Apprenti détective, entre à l'épisode 2 (c'est lui qui frappe).",
+      "caractere": "Espiègle, énergique, fait les découvertes et les gaffes. Rendu premium, pas enfantin (jeune adulte, pas un enfant).",
+      "parler": "Vif, aigu, rires espiègles. Signature : « Indice numéro un ! »",
+      "apparence": "Petit safou violet foncé brillant, mini trench beige, loupe. Voir prompts/personnages.md.",
+      "image_ref": {"job_id": "1e83134a-6f83-4cb8-8748-1a54cee34de3", "modele": "nano_banana_2", "statut": "valide"},
+      "poses_sans_fond": [],
+      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "jeune adulte, vive, énergique", "statut": "a_choisir (épisode 2)"}
+    }
+  ],
+  "lieux": [
+    {"id": "salon", "nom": "Salon", "description": "Canapé d'angle crème, table basse en trois plateaux, lustres cage dorés, faux plafond lumineux, TV, clim, sol marbre noir.", "clips": ["assets/decor-photos/salon.jpg"]},
+    {"id": "coin-repas", "nom": "Coin repas et frigo", "description": "Grand réfrigérateur américain noir, table blanche et deux chaises camel, suspension trois lanternes.", "clips": ["assets/decor-photos/coin-repas-frigo.jpg"]},
+    {"id": "chambre", "nom": "Chambre avec balcon", "description": "Lit tête arrondie en velours, coussins brodés, baie vitrée coulissante vers le balcon, rideaux dorés, clim, fauteuil.", "clips": ["assets/decor-photos/chambre-balcon.jpg"]},
+    {"id": "placard", "nom": "Placard de la chambre", "description": "Placard coulissant : peignoirs, coffre-fort, fer et planche à repasser.", "clips": ["assets/decor-photos/chambre-placard-coffre.jpg"]},
+    {"id": "couloir", "nom": "Couloir et porte d'entrée", "description": "Couloir blanc, tableau, sol marbre noir, porte d'entrée en bois sombre au fond.", "clips": ["assets/decor-photos/couloir-porte-entree.jpg"]}
+  ],
+  "musique": {
+    "theme": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net",
+    "outil": "Higgsfield elevenlabs_music_v2_5 (40 s)",
+    "licence": "à vérifier : conditions d'usage commercial du forfait Higgsfield Pro (texte à archiver avant export final)",
+    "verifiee_le": "",
+    "fichier": "",
+    "statut": "a_generer"
+  },
+  "faits": [
+    {"id": "SITE_RESERVATION", "texte": "Réservation sur dkgguesthouse.com : demande de réservation envoyée depuis la fiche du logement, sans compte, sans paiement en ligne ; DKG vérifie la disponibilité et confirme sur WhatsApp. Réserve ton séjour sur dkgguesthouse.com", "statut": "verifie", "source": "https://dkgguesthouse.com/comment-ca-marche (bouton « Réserver » → /logements)", "date": "2026-11-06"},
+    {"id": "WHATSAPP", "texte": "WhatsApp DKG : +237 699 60 17 08, assistance 7j/7 de 8 h à 22 h", "statut": "verifie", "source": "https://dkgguesthouse.com/contact", "date": "2026-11-06"},
+    {"id": "DECORS_REELS", "texte": "Les décors sont les vraies photos d'un appartement DKG fournies par DKG", "statut": "verifie", "source": "assets/decor-photos/ (photos fournies par Pavel)", "date": "2026-11-06"},
+    {"id": "EQUIP_CLIM", "texte": "clim visible au salon et dans la chambre", "statut": "verifie", "source": "photos salon.jpg, chambre-balcon.jpg", "date": "2026-11-06"},
+    {"id": "EQUIP_TV", "texte": "TV visible au salon", "statut": "verifie", "source": "photo salon.jpg", "date": "2026-11-06"},
+    {"id": "EQUIP_COFFRE", "texte": "coffre-fort dans le placard de la chambre", "statut": "verifie", "source": "photo chambre-placard-coffre.jpg", "date": "2026-11-06"},
+    {"id": "EQUIP_PEIGNOIRS", "texte": "peignoirs dans le placard", "statut": "verifie", "source": "photo chambre-placard-coffre.jpg", "date": "2026-11-06"},
+    {"id": "EQUIP_REPASSAGE", "texte": "fer à repasser et planche à repasser", "statut": "verifie", "source": "photo chambre-placard-coffre.jpg", "date": "2026-11-06"},
+    {"id": "EQUIP_FRIGO", "texte": "grand frigo (réfrigérateur américain) au coin repas", "statut": "verifie", "source": "photo coin-repas-frigo.jpg", "date": "2026-11-06"},
+    {"id": "EQUIP_BALCON", "texte": "chambre avec balcon (baie vitrée coulissante)", "statut": "verifie", "source": "photo chambre-balcon.jpg", "date": "2026-11-06"},
+    {"id": "LIEN_BIO", "texte": "Le lien en bio mène à la réservation DKG", "statut": "a_fournir", "note": "Compte TikTok non connecté (tiktok_accounts vide le 2026-11-06)."},
+    {"id": "WIFI", "texte": "wifi", "statut": "a_fournir"},
+    {"id": "GROUPE_ELECTROGENE", "texte": "groupe électrogène", "statut": "a_fournir"},
+    {"id": "LOGEMENT_FICHE", "texte": "Fiche dkgguesthouse.com correspondant à l'appartement des photos (quartier, capacité, prix)", "statut": "a_fournir", "note": "Le site liste 20+ logements (Bonamoussadi, Bonapriso, Logpom, Makepe, Bastos…) ; il faut savoir lequel est photographié avant d'en citer le quartier ou le prix."}
+  ],
+  "episodes": [],
+  "arc": [
+    {"numero": 1, "titre": "La clé de trop", "pitch": "Mangue arrive ; feuille d'ananas sur l'oreiller ; Ananas aurait gardé une clé ; on frappe."},
+    {"numero": 2, "titre": "Qui frappe ?", "pitch": "C'est Petit Safou ; le coffre-fort a été refermé avec un code inconnu."},
+    {"numero": 3, "titre": "Le frigo", "pitch": "Dans le grand frigo, un mot : « Je reviens à minuit — A. »"},
+    {"numero": 4, "titre": "Minuit au salon", "pitch": "Ombre d'une couronne au mur, la télé s'allume seule."},
+    {"numero": 5, "titre": "Le balcon", "pitch": "Safou suit une piste jusqu'au balcon de la chambre."},
+    {"numero": 6, "titre": "La vérité", "pitch": "Ananas a tant aimé son séjour qu'il a voulu revenir."},
+    {"numero": 7, "titre": "La prochaine clé, c'est la tienne", "pitch": "Conclusion et appel à réserver sur dkgguesthouse.com."}
+  ],
+  "fils_ouverts": []
+}

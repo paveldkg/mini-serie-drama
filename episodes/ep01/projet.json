@@ -1,0 +1,369 @@
+{
+  "projet": {
+    "id": "2026-11-06-dkg-la-cle-de-trop-ep1",
+    "client": "DKG Guest House",
+    "langue": "fr-CA",
+    "version": 1
+  },
+  "brief": {
+    "entreprise": "DKG Guest House — appartements meublés à Douala",
+    "secteur": "immobilier-location-meublee",
+    "offre": "Séjours en appartements meublés DKG, demande de réservation sur dkgguesthouse.com",
+    "cible": "Adultes voyageurs (affaires, diaspora, familles en visite) qui cherchent un logement meublé à Douala ; pas de ciblage des moins de 13 ans",
+    "objectif_commercial": "Faire suivre la série et obtenir des réservations directes",
+    "action_spectateur": "Suivre le compte et toucher le lien en bio pour réserver",
+    "canal": "pub-sociale",
+    "placement": "TikTok organique 9:16, série à épisodes",
+    "strategie": "storytelling+conversion",
+    "justification": "Une intrigue à épisodes retient l'attention et fait revenir ; le décor réel montre les appartements sans discours de vente.",
+    "promesse": "Un appartement meublé DKG, tel qu'il est vraiment, à réserver sur dkgguesthouse.com",
+    "accroche": "Qui dormait ici ?",
+    "benefice": "Voir les vraies pièces avant de réserver, au fil d'une intrigue",
+    "objections": [
+      "Est-ce que l'appartement ressemble aux photos ? (réponse : décors 100 % réels)",
+      "Comment réserver ? (réponse : demande sur dkgguesthouse.com, confirmation sur WhatsApp)"
+    ],
+    "kpi": "Taux de visionnage complet, abonnements, clics sur le lien en bio, réservations attribuées",
+    "test_ab": "Hook A « Qui dormait ici ? » (question) contre hook B : gros plan silencieux sur la feuille d'ananas + « Il est parti… »",
+    "public_moins_13_ans": false
+  },
+  "faits": [
+    {
+      "id": "SITE_RESERVATION",
+      "texte": "Réservation sur dkgguesthouse.com : demande de réservation envoyée depuis la fiche du logement, sans compte, sans paiement en ligne ; DKG vérifie la disponibilité et confirme sur WhatsApp. Réserve ton séjour sur dkgguesthouse.com",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/comment-ca-marche (bouton « Réserver » → /logements)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "WHATSAPP",
+      "texte": "WhatsApp DKG : +237 699 60 17 08, assistance 7j/7 de 8 h à 22 h",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/contact",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "DECORS_REELS",
+      "texte": "Les décors sont les vraies photos d'un appartement DKG fournies par DKG",
+      "statut": "verifie",
+      "source": "assets/decor-photos/ (photos fournies par Pavel)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_CLIM",
+      "texte": "clim visible au salon et dans la chambre",
+      "statut": "verifie",
+      "source": "photos salon.jpg, chambre-balcon.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_TV",
+      "texte": "TV visible au salon",
+      "statut": "verifie",
+      "source": "photo salon.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_COFFRE",
+      "texte": "coffre-fort dans le placard de la chambre",
+      "statut": "verifie",
+      "source": "photo chambre-placard-coffre.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_PEIGNOIRS",
+      "texte": "peignoirs dans le placard",
+      "statut": "verifie",
+      "source": "photo chambre-placard-coffre.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_REPASSAGE",
+      "texte": "fer à repasser et planche à repasser",
+      "statut": "verifie",
+      "source": "photo chambre-placard-coffre.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_FRIGO",
+      "texte": "grand frigo (réfrigérateur américain) au coin repas",
+      "statut": "verifie",
+      "source": "photo coin-repas-frigo.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_BALCON",
+      "texte": "chambre avec balcon (baie vitrée coulissante)",
+      "statut": "verifie",
+      "source": "photo chambre-balcon.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "LIEN_BIO",
+      "texte": "Le lien en bio mène à la réservation DKG",
+      "statut": "a_fournir",
+      "note": "Compte TikTok non connecté (tiktok_accounts vide le 2026-11-06)."
+    },
+    {
+      "id": "WIFI",
+      "texte": "wifi",
+      "statut": "a_fournir"
+    },
+    {
+      "id": "GROUPE_ELECTROGENE",
+      "texte": "groupe électrogène",
+      "statut": "a_fournir"
+    },
+    {
+      "id": "LOGEMENT_FICHE",
+      "texte": "Fiche dkgguesthouse.com correspondant à l'appartement des photos (quartier, capacité, prix)",
+      "statut": "a_fournir",
+      "note": "Le site liste 20+ logements (Bonamoussadi, Bonapriso, Logpom, Makepe, Bastos…) ; il faut savoir lequel est photographié avant d'en citer le quartier ou le prix."
+    }
+  ],
+  "direction_artistique": {
+    "idee": "Dans un appartement DKG à Douala, Mademoiselle Mangue découvre qu'un ancien client, Monsieur Ananas, a peut-être gardé une clé. Bana la concierge et Petit Safou mènent l'enquête, pièce après pièce.",
+    "style": "Fruits en 3D premium style long métrage, incrustés sur les VRAIES photos de l'appartement DKG ; étalonnage chaud le jour, bleu nuit pour le mystère.",
+    "emotion": "suspense, curiosité",
+    "palette": [
+      "#111418",
+      "#FFFFFF",
+      "#FF3130"
+    ],
+    "rythme": "plans de 1 à 3 s, coupes calées sur le tempo",
+    "transitions": "coupes sèches, fondu au noir avant la carte finale",
+    "typo": {
+      "famille": "Montserrat ExtraBold (sous-titres et textes)"
+    },
+    "musique": {
+      "description": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net à 25 s (indice)",
+      "source": "Higgsfield elevenlabs_music_v2_5 (à générer après accord)",
+      "licence": "à vérifier : usage commercial du forfait Higgsfield Pro",
+      "statut": "a_trouver"
+    },
+    "logo": {
+      "statut": "fourni_client",
+      "fichier": "assets/logo/dkg-guest-house.png",
+      "note": "Version sans fond attendue ; d'ici là, carte finale sur fond #191919 (identique au fond du logo)."
+    }
+  },
+  "formats": [
+    {
+      "nom": "vertical",
+      "ratio": "9:16",
+      "resolution_cible": "1080x1920",
+      "usage": "TikTok, Reels"
+    }
+  ],
+  "voix_off": {
+    "active": true,
+    "voix": "voix des personnages (bible)",
+    "outil": "Higgsfield",
+    "statut": "a_generer"
+  },
+  "cta": {
+    "texte": "dkgguesthouse.com",
+    "coordonnees": "À suivre…",
+    "statut": "verifie"
+  },
+  "mention_images_illustratives": "Personnages générés par IA",
+  "scenes": [
+    {
+      "id": "S1",
+      "duree": 1.9,
+      "fonction": "accroche",
+      "action": "Nuit. Gros plan : Bana sur le lit, face caméra, regarde à gauche puis à droite et chuchote.",
+      "plan": "gros plan, chambre réelle en fond",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "coup sourd, puis silence",
+      "texte_ecran": "Qui dormait ici ?",
+      "voix_off": "Quelqu'un a dormi ici."
+    },
+    {
+      "id": "S2",
+      "duree": 2.0,
+      "fonction": "transition",
+      "action": "Jour. Couloir et porte d'entrée : Mademoiselle Mangue arrive avec sa petite valise.",
+      "plan": "plan large du couloir réel",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "thème de la série démarre, roulettes de valise",
+      "texte_ecran": "Plus tôt…"
+    },
+    {
+      "id": "S3",
+      "duree": 3.4,
+      "fonction": "ambiance",
+      "action": "Le salon réel : lustres dorés, canapé crème, TV. Mangue, sur le canapé, enlève ses lunettes, éblouie.",
+      "plan": "plan large du salon",
+      "mouvement": "zoom léger out",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "« ting » discret",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_TV",
+        "EQUIP_CLIM"
+      ],
+      "voix_off": "Wouah… Ça, c'est du premium."
+    },
+    {
+      "id": "S4",
+      "duree": 3.2,
+      "fonction": "ambiance",
+      "action": "Coin repas réel et grand frigo noir. Bana, debout sur la table, présente la pièce d'un geste.",
+      "plan": "plan moyen",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "petit « clink »",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_FRIGO",
+        "EQUIP_CLIM"
+      ],
+      "voix_off": "Coin repas, grand frigo… et la clim."
+    },
+    {
+      "id": "S5",
+      "duree": 2.8,
+      "fonction": "ambiance",
+      "action": "Jour. Chambre réelle, baie vitrée vers le balcon. Mangue sur le lit, ravie.",
+      "plan": "plan large de la chambre",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "ambiance de ville douce",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_BALCON"
+      ],
+      "voix_off": "Une chambre avec balcon ?"
+    },
+    {
+      "id": "S6",
+      "duree": 2.8,
+      "fonction": "ambiance",
+      "action": "Placard réel : peignoirs, coffre-fort, fer et planche à repasser. Bana, sur le lit, les montre.",
+      "plan": "plan moyen sur le placard",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "glissement de porte coulissante",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_PEIGNOIRS",
+        "EQUIP_COFFRE",
+        "EQUIP_REPASSAGE"
+      ],
+      "voix_off": "Peignoirs, coffre-fort, fer à repasser…"
+    },
+    {
+      "id": "S7",
+      "duree": 2.6,
+      "fonction": "demonstration",
+      "action": "Gros plan sur l'oreiller : une feuille de couronne d'ananas posée dessus. La musique s'arrête net.",
+      "plan": "gros plan sur l'oreiller (recadrage de la photo réelle)",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "la musique s'arrête net",
+      "voix_off": "Bana… c'est quoi, ça ?"
+    },
+    {
+      "id": "S8",
+      "duree": 2.0,
+      "fonction": "transition",
+      "action": "Bana, sur le lit, se décompose.",
+      "plan": "plan rapproché",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "nappe grave",
+      "voix_off": "Il est parti, pourtant !"
+    },
+    {
+      "id": "S9",
+      "duree": 3.3,
+      "fonction": "preuve",
+      "action": "Nuit. Silhouette à couronne en pointes devant la baie vitrée, visage invisible.",
+      "plan": "plan moyen sur la baie vitrée réelle",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "vent léger, ville au loin",
+      "voix_off": "Certaines clés… ne se rendent jamais."
+    },
+    {
+      "id": "S10",
+      "duree": 1.5,
+      "fonction": "demonstration",
+      "action": "Nuit. Gros plan sur le coffre-fort réel : bip, il se verrouille tout seul.",
+      "plan": "gros plan (recadrage de la photo réelle)",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "bip de verrouillage du coffre"
+    },
+    {
+      "id": "S11",
+      "duree": 2.2,
+      "fonction": "transition",
+      "action": "Nuit. Mangue, inquiète, serre sa clé.",
+      "plan": "plan rapproché",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "silence",
+      "voix_off": "J'ai la seule clé… non ?"
+    },
+    {
+      "id": "S12",
+      "duree": 1.3,
+      "fonction": "transition",
+      "action": "Nuit. Gros plan sur la porte d'entrée réelle : TOC TOC TOC. Flash, fondu au noir.",
+      "plan": "gros plan sur la porte (recadrage de la photo réelle)",
+      "mouvement": "zoom léger in",
+      "source": "client",
+      "statut_media": "disponible",
+      "transition": "fondu_noir",
+      "son": "TOC TOC TOC, impact grave"
+    },
+    {
+      "id": "S13",
+      "duree": 5.0,
+      "fonction": "cta",
+      "action": "Carte finale : logo DKG, « Réserve ton séjour sur », dkgguesthouse.com en grand, « À suivre… », « Personnages générés par IA ».",
+      "plan": "carte graphique",
+      "mouvement": "zoom léger aucun",
+      "source": "graphique",
+      "statut_media": "disponible",
+      "transition": "coupe",
+      "son": "fin du thème",
+      "faits_utilises": [
+        "SITE_RESERVATION"
+      ],
+      "voix_off": "Ta clé t'attend sur dkgguesthouse point com."
+    }
+  ],
+  "ressources": [],
+  "production": {
+    "outil_video": "clips DKG + Higgsfield",
+    "fps": 30,
+    "statut": "prepare"
+  }
+}
