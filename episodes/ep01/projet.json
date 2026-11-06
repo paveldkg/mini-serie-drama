@@ -105,20 +105,41 @@
       "note": "Compte TikTok non connecté (tiktok_accounts vide le 2026-11-06)."
     },
     {
-      "id": "WIFI",
-      "texte": "wifi",
-      "statut": "a_fournir"
-    },
-    {
-      "id": "GROUPE_ELECTROGENE",
-      "texte": "groupe électrogène",
-      "statut": "a_fournir"
-    },
-    {
       "id": "LOGEMENT_FICHE",
-      "texte": "Fiche dkgguesthouse.com correspondant à l'appartement des photos (quartier, capacité, prix)",
-      "statut": "a_fournir",
-      "note": "Le site liste 20+ logements (Bonamoussadi, Bonapriso, Logpom, Makepe, Bastos…) ; il faut savoir lequel est photographié avant d'en citer le quartier ou le prix."
+      "texte": "Les décors sont le Studio Kyoto, Bonamoussadi, Douala — studio, 2 voyageurs",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "QUARTIER",
+      "texte": "Bonamoussadi, Douala",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "KYOTO_EQUIPEMENTS",
+      "texte": "Studio Kyoto, équipements déclarés sur la fiche : Wi-Fi Starlink, climatisation, eau chaude, parking, gardien, groupe électrogène, Canal+, Netflix, machine à laver, cuisine équipée, réfrigérateur, micro-ondes, balcon, télévision",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06",
+      "note": "Déclaration de DKG sur sa fiche, non constatée sur nos photos pour wifi, groupe électrogène, parking, gardien, Canal+, Netflix, machine à laver. Pavel avait demandé confirmation : à confirmer par lui avant usage à l'écran."
+    },
+    {
+      "id": "KYOTO_PRIX",
+      "texte": "Studio Kyoto : 34 999 FCFA / nuit en semaine, 40 000 FCFA vendredi et samedi",
+      "statut": "hypothese",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06",
+      "note": "Prix susceptible de changer : ne pas l'afficher dans la vidéo ni les légendes."
+    },
+    {
+      "id": "LIEN_FICHE",
+      "texte": "Fiche de réservation directe : dkgguesthouse.com/logement/studio-kyoto-t8i2",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06"
     }
   ],
   "direction_artistique": {
@@ -136,8 +157,8 @@
       "famille": "Montserrat ExtraBold (sous-titres et textes)"
     },
     "musique": {
-      "description": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net à 25 s (indice)",
-      "source": "Higgsfield elevenlabs_music_v2_5 (à générer après accord)",
+      "description": "Thème de la série (elevenlabs_music_v2_5, 40 s) recoupé : départ au plan 2, coupure nette sur l'indice, reprise de la partie tension sur la silhouette, fin du thème sur la carte finale",
+      "source": "Higgsfield job 5d31a4c3-8333-423c-9902-f239bde664aa",
       "licence": "à vérifier : usage commercial du forfait Higgsfield Pro",
       "statut": "a_trouver"
     },
@@ -159,7 +180,7 @@
     "active": true,
     "voix": "voix des personnages (bible)",
     "outil": "Higgsfield",
-    "statut": "a_generer"
+    "statut": "generee"
   },
   "cta": {
     "texte": "dkgguesthouse.com",
@@ -186,7 +207,7 @@
       "id": "S2",
       "duree": 2.0,
       "fonction": "transition",
-      "action": "Jour. Couloir et porte d'entrée : Mademoiselle Mangue arrive avec sa petite valise.",
+      "action": "Jour. Couloir réel : au fond, devant la porte d'entrée, Mademoiselle Mangue arrive avec sa petite valise.",
       "plan": "plan large du couloir réel",
       "mouvement": "zoom léger in",
       "source": "client",
@@ -197,7 +218,7 @@
     },
     {
       "id": "S3",
-      "duree": 3.4,
+      "duree": 2.8,
       "fonction": "ambiance",
       "action": "Le salon réel : lustres dorés, canapé crème, TV. Mangue, sur le canapé, enlève ses lunettes, éblouie.",
       "plan": "plan large du salon",
@@ -215,7 +236,7 @@
     },
     {
       "id": "S4",
-      "duree": 3.2,
+      "duree": 3.3,
       "fonction": "ambiance",
       "action": "Coin repas réel et grand frigo noir. Bana, debout sur la table, présente la pièce d'un geste.",
       "plan": "plan moyen",
@@ -250,7 +271,7 @@
     },
     {
       "id": "S6",
-      "duree": 2.8,
+      "duree": 3.5,
       "fonction": "ambiance",
       "action": "Placard réel : peignoirs, coffre-fort, fer et planche à repasser. Bana, sur le lit, les montre.",
       "plan": "plan moyen sur le placard",
@@ -320,7 +341,7 @@
     },
     {
       "id": "S11",
-      "duree": 2.2,
+      "duree": 2.4,
       "fonction": "transition",
       "action": "Nuit. Mangue, inquiète, serre sa clé.",
       "plan": "plan rapproché",
@@ -345,7 +366,7 @@
     },
     {
       "id": "S13",
-      "duree": 5.0,
+      "duree": 4.6,
       "fonction": "cta",
       "action": "Carte finale : logo DKG, « Réserve ton séjour sur », dkgguesthouse.com en grand, « À suivre… », « Personnages générés par IA ».",
       "plan": "carte graphique",

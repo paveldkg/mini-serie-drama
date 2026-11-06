@@ -25,12 +25,12 @@
   "sous_titres_hauteur": 0.66,
   "musique_debut": 0,
   "musique": {
-    "description": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net à 25 s (indice)",
-    "source": "Higgsfield elevenlabs_music_v2_5 (à générer après accord)",
+    "description": "Thème de la série (elevenlabs_music_v2_5, 40 s) recoupé : départ au plan 2, coupure nette sur l'indice, reprise de la partie tension sur la silhouette, fin du thème sur la carte finale",
+    "source": "Higgsfield job 5d31a4c3-8333-423c-9902-f239bde664aa",
     "licence": "à vérifier : usage commercial du forfait Higgsfield Pro",
     "statut": "a_trouver"
   },
-  "statut_voix": "a_generer",
+  "statut_voix": "generee",
   "test_ab": "Hook A « Qui dormait ici ? » (question) contre hook B : gros plan silencieux sur la feuille d'ananas + « Il est parti… »",
   "plans": [
     {
@@ -88,7 +88,7 @@
     {
       "id": "E03",
       "clip": "salon.jpg",
-      "duree": 3.4,
+      "duree": 2.8,
       "fonction": "decor",
       "action": "Le salon réel : lustres dorés, canapé crème, TV. Mangue, sur le canapé, enlève ses lunettes, éblouie.",
       "cadrage": "plan large du salon",
@@ -117,7 +117,7 @@
     {
       "id": "E04",
       "clip": "coin-repas-frigo.jpg",
-      "duree": 3.2,
+      "duree": 3.3,
       "fonction": "decor",
       "action": "Coin repas réel et grand frigo noir. Bana, debout sur la table, présente la pièce d'un geste.",
       "cadrage": "plan moyen",
@@ -131,7 +131,8 @@
       ],
       "replique": {
         "perso": "Bana",
-        "texte": "Coin repas, grand frigo… et la clim."
+        "texte": "Coin repas, grand frigo… et la clim.",
+        "decalage": 0.08
       },
       "personnage_incruste": {
         "image": "assets/personnages/bana-visite.png",
@@ -174,7 +175,7 @@
     {
       "id": "E06",
       "clip": "chambre-placard-coffre.jpg",
-      "duree": 2.8,
+      "duree": 3.5,
       "fonction": "decor",
       "action": "Placard réel : peignoirs, coffre-fort, fer et planche à repasser. Bana, sur le lit, les montre.",
       "cadrage": "plan moyen sur le placard",
@@ -189,7 +190,8 @@
       ],
       "replique": {
         "perso": "Bana",
-        "texte": "Peignoirs, coffre-fort, fer à repasser…"
+        "texte": "Peignoirs, coffre-fort, fer à repasser…",
+        "decalage": 0.08
       },
       "personnage_incruste": {
         "image": "assets/personnages/bana-visite.png",
@@ -315,7 +317,7 @@
     {
       "id": "E11",
       "clip": "chambre-balcon.jpg",
-      "duree": 2.2,
+      "duree": 2.4,
       "fonction": "tension",
       "action": "Nuit. Mangue, inquiète, serre sa clé.",
       "cadrage": "plan rapproché",
@@ -330,7 +332,8 @@
       "son": "silence",
       "replique": {
         "perso": "Mangue",
-        "texte": "J'ai la seule clé… non ?"
+        "texte": "J'ai la seule clé… non ?",
+        "decalage": 0.08
       },
       "personnage_incruste": {
         "image": "assets/personnages/mangue-inquiete.png",
@@ -364,7 +367,7 @@
       "id": "E13",
       "clip": "../graphiques/carte-finale.png",
       "source": "graphique",
-      "duree": 5.0,
+      "duree": 4.6,
       "fonction": "fin",
       "action": "Carte finale : logo DKG, « Réserve ton séjour sur », dkgguesthouse.com en grand, « À suivre… », « Personnages générés par IA ».",
       "cadrage": "carte graphique",
@@ -380,5 +383,59 @@
         "decalage": 0.6
       }
     }
-  ]
+  ],
+  "voix": {
+    "modele": "elevenlabs_v4",
+    "job_id": "be05347e-bec1-4de2-b445-b40b8e99f5ee",
+    "Bana": "Elena ca83ca7f-c186-493d-bd69-0d765fa861b2",
+    "Mangue": "Sloane b57b22a0-f287-405b-bc82-6f08f5e6bb1f",
+    "Ananas": "Caspian ef70cc83-3015-4bad-9359-0ea968c43ec0"
+  },
+  "bande_son": {
+    "musique": "theme-serie.mp3",
+    "segments": [
+      {
+        "debut": 1.9,
+        "source": 0.0,
+        "duree": 14.4,
+        "fondu_sortie": 0.0
+      },
+      {
+        "debut": 20.9,
+        "source": 19.5,
+        "duree": 8.5,
+        "fondu_entree": 0.4,
+        "fondu_sortie": 0.5
+      },
+      {
+        "debut": 29.4,
+        "source": 35.4,
+        "duree": 4.6,
+        "gain_db": -4,
+        "fondu_entree": 0.3
+      }
+    ],
+    "effets": [
+      {
+        "t": 0.0,
+        "type": "coup"
+      },
+      {
+        "t": 24.55,
+        "type": "bip"
+      },
+      {
+        "t": 28.15,
+        "type": "toc"
+      },
+      {
+        "t": 28.5,
+        "type": "toc"
+      },
+      {
+        "t": 28.85,
+        "type": "toc"
+      }
+    ]
+  }
 }
