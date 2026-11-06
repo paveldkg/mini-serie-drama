@@ -22,3 +22,10 @@ Total ≈ 44 s. Coût des plans : 40 s × 7 = 280 crédits (+ reprises éventuel
 Références Higgsfield : photos salon 6469316d…, coin-repas 5d1ac7f8…, chambre-balcon 3b580e1c…, placard 1825574f… ;
 personnages Bana 273de234…, Mangue dfa4f558…, Ananas f596f0bd…, feuille 6c534c83… ;
 voix Bana f7447fd2…, Mangue 2bca4cc6…, Ananas 571101bf… (extraites des répliques Eleven v4).
+
+## Résultat (2026-11-06)
+- 5 plans générés du premier coup (C4 en test, puis C1, C2, C3, C5) : français reconnu à 98-100 % par la transcription automatique.
+- Montage `outils/montage_premium.py` : 44,0 s, contrôle Vidéo 4K CONFORME, −14,3 LUFS.
+- Corrections au montage : gros plan de Mangue (C5) étalonné en nuit ; sous-titres calés réplique par réplique.
+- Réserve visuelle : la feuille d'ananas ressemble à une palme (accepté) ; Bana change d'échelle selon les plans (choix de mise en scène).
+- Vidéo : media_id 1d49bb8f-7372-4c47-b182-c1f4774bf9f8. Coût : 280 crédits. Solde : 314,30.

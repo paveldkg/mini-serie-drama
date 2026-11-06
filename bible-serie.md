@@ -1,7 +1,7 @@
 # Bible de série — La Clé de Trop
 
 **Pitch** : Dans un appartement DKG à Douala, Mademoiselle Mangue découvre qu'un ancien client, Monsieur Ananas, a peut-être gardé une clé. Bana la concierge et Petit Safou mènent l'enquête, pièce après pièce.
-**Ton** : drame / mystère, premium, jamais enfantin · **Style** : Fruits en 3D premium style long métrage, incrustés sur les VRAIES photos de l'appartement DKG ; étalonnage chaud le jour, bleu nuit pour le mystère.
+**Ton** : drame / mystère, premium, jamais enfantin · **Style** : Plans réellement animés (Seedance 2.5, 720p mis à l'échelle en 1080x1920) : fruits 3D premium de long métrage qui jouent et se parlent, caméra en mouvement, dans les pièces du Studio Kyoto redessinées par le modèle à partir des vraies photos ; nuit en bleu froid pour le suspense.
 **Palette** : #111418, #FFFFFF, #FF3130 · **Police** : Montserrat ExtraBold (sous-titres et textes) · **Format** : 9:16 1080x1920, 30 i/s, -14 LUFS, [30, 45] s
 **CTA** : « Réserve ton séjour sur dkgguesthouse.com »
 
@@ -9,11 +9,12 @@
 - Décors : toujours les vraies photos DKG (assets/decor-photos/). Seuls les fruits (et une feuille d'ananas, partie du personnage) sont générés.
 - Étalonnage autorisé (couleur, lumière de nuit), jamais de retouche des meubles, murs, vue ou équipements.
 - Aucun équipement, prix, quartier ou disponibilité annoncé sans fait « verifie » ci-dessous.
-- Carte finale : logo DKG, « À suivre… », « Réserve ton séjour sur dkgguesthouse.com », « Personnages générés par IA ».
 - Étiquette TikTok « contenu généré par IA » activée à chaque publication.
 - Voix : voix prédéfinies Higgsfield, voice_id figés après validation, jamais de clonage.
 - Une police, une couleur d'accent (#FF3130), coupes sèches, un fondu au noir avant la carte finale, aucun émoji à l'écran.
 - Aucune dépense ni publication sans l'accord explicite de Pavel.
+- Carte finale : logo DKG, « Réserve ton séjour sur dkgguesthouse.com », « À suivre… ». Pas de mention IA sur l'image (décision de Pavel, 2026-11-06) : l'étiquette TikTok « contenu généré par IA » est OBLIGATOIRE à chaque publication.
+- Décors : les vraies photos servent de référence au modèle vidéo (décision de Pavel, 2026-11-06) ; vérifier à chaque plan que la pièce reste reconnaissable et qu'aucun équipement non vérifié n'apparaît.
 
 ## Personnages
 
@@ -79,7 +80,7 @@
 - [verifie] Fiche de réservation directe : dkgguesthouse.com/logement/studio-kyoto-t8i2 — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
 
 ## Épisodes
-- Ép. 1 « La clé de trop » — Mademoiselle Mangue arrive au Studio Kyoto ; Bana lui fait visiter le salon, le coin repas, la chambre avec balcon et le placard. Une feuille d'ananas sur l'oreiller : Monsieur Ananas est pourtant parti. Sa silhouette apparaît devant la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe. · Cliffhanger : TOC TOC TOC à la porte d'entrée, flash, fondu au noir.
+- Ép. 1 « La clé de trop » — Bana chuchote qu'on a dormi dans la chambre. Plus tôt : Mangue arrive au Studio Kyoto, Bana lui fait visiter le salon, le coin repas et la chambre. Mangue trouve une feuille d'ananas sur l'oreiller ; Monsieur Ananas est pourtant parti. Sa silhouette apparaît derrière la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe. · Cliffhanger : TOC TOC TOC à la porte d'entrée, flash, fondu au noir.
 
 ## Fils ouverts
 - Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)

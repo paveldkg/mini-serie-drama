@@ -10,7 +10,7 @@
     "offre": "Séjours en appartements meublés DKG, demande de réservation sur dkgguesthouse.com",
     "pitch": "Dans un appartement DKG à Douala, Mademoiselle Mangue découvre qu'un ancien client, Monsieur Ananas, a peut-être gardé une clé. Bana la concierge et Petit Safou mènent l'enquête, pièce après pièce.",
     "ton": "drame / mystère, premium, jamais enfantin",
-    "style": "Fruits en 3D premium style long métrage, incrustés sur les VRAIES photos de l'appartement DKG ; étalonnage chaud le jour, bleu nuit pour le mystère.",
+    "style": "Plans réellement animés (Seedance 2.5, 720p mis à l'échelle en 1080x1920) : fruits 3D premium de long métrage qui jouent et se parlent, caméra en mouvement, dans les pièces du Studio Kyoto redessinées par le modèle à partir des vraies photos ; nuit en bleu froid pour le suspense.",
     "palette": [
       "#111418",
       "#FFFFFF",
@@ -35,17 +35,19 @@
     "logo": {
       "statut": "fourni_client",
       "fichier": "assets/logo/dkg-guest-house.png",
-      "note": "Version sans fond attendue ; d'ici là, carte finale sur fond #191919 (identique au fond du logo)."
+      "note": "Version sans fond attendue ; d'ici là, carte finale sur fond #191919 (identique au fond du logo).",
+      "carte_premium": "assets/graphiques/carte-finale-premium.png"
     },
     "regles": [
       "Décors : toujours les vraies photos DKG (assets/decor-photos/). Seuls les fruits (et une feuille d'ananas, partie du personnage) sont générés.",
       "Étalonnage autorisé (couleur, lumière de nuit), jamais de retouche des meubles, murs, vue ou équipements.",
       "Aucun équipement, prix, quartier ou disponibilité annoncé sans fait « verifie » ci-dessous.",
-      "Carte finale : logo DKG, « À suivre… », « Réserve ton séjour sur dkgguesthouse.com », « Personnages générés par IA ».",
       "Étiquette TikTok « contenu généré par IA » activée à chaque publication.",
       "Voix : voix prédéfinies Higgsfield, voice_id figés après validation, jamais de clonage.",
       "Une police, une couleur d'accent (#FF3130), coupes sèches, un fondu au noir avant la carte finale, aucun émoji à l'écran.",
-      "Aucune dépense ni publication sans l'accord explicite de Pavel."
+      "Aucune dépense ni publication sans l'accord explicite de Pavel.",
+      "Carte finale : logo DKG, « Réserve ton séjour sur dkgguesthouse.com », « À suivre… ». Pas de mention IA sur l'image (décision de Pavel, 2026-11-06) : l'étiquette TikTok « contenu généré par IA » est OBLIGATOIRE à chaque publication.",
+      "Décors : les vraies photos servent de référence au modèle vidéo (décision de Pavel, 2026-11-06) ; vérifier à chaque plan que la pièce reste reconnaissable et qu'aucun équipement non vérifié n'apparaît."
     ]
   },
   "personnages": [
@@ -402,7 +404,7 @@
       "numero": 1,
       "titre": "La clé de trop",
       "date": "2026-11-06",
-      "resume": "Mademoiselle Mangue arrive au Studio Kyoto ; Bana lui fait visiter le salon, le coin repas, la chambre avec balcon et le placard. Une feuille d'ananas sur l'oreiller : Monsieur Ananas est pourtant parti. Sa silhouette apparaît devant la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe.",
+      "resume": "Bana chuchote qu'on a dormi dans la chambre. Plus tôt : Mangue arrive au Studio Kyoto, Bana lui fait visiter le salon, le coin repas et la chambre. Mangue trouve une feuille d'ananas sur l'oreiller ; Monsieur Ananas est pourtant parti. Sa silhouette apparaît derrière la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe.",
       "cliffhanger": "TOC TOC TOC à la porte d'entrée, flash, fondu au noir.",
       "voix": {
         "Bana": "Elena (elevenlabs_v4)",
@@ -417,7 +419,24 @@
         "Pourquoi la feuille d'ananas sur l'oreiller ?"
       ],
       "video_higgsfield_media_id": "3cfba7bf-8820-42b3-9675-db001fd6a0e1",
-      "statut": "rendu et contrôlé, non publié"
+      "statut": "rendu et contrôlé, non publié",
+      "version_premium": {
+        "media_id": "1d49bb8f-7372-4c47-b182-c1f4774bf9f8",
+        "duree_s": 44.0,
+        "lufs": -14.3,
+        "clips_job_ids": {
+          "C1": "edbc9267-ed33-4cc1-b0db-7052e0c15bcd",
+          "C2": "5b329ef2-3e1f-45a3-8088-10ea798d2df2",
+          "C3": "9ddf8811-af30-4634-b008-e967b3d1e588",
+          "C4": "f20e2cf9-3593-4835-baf9-ffeb827f46a6",
+          "C5": "9ef8760f-ccc0-4bb1-8f90-e1de58d610ab"
+        },
+        "statut": "rendue et contrôlée (CONFORME), non publiée"
+      },
+      "version_economique": {
+        "media_id": "3cfba7bf-8820-42b3-9675-db001fd6a0e1",
+        "statut": "refusée par Pavel (trop statique)"
+      }
     }
   ],
   "arc": [
@@ -490,10 +509,33 @@
         "date": "2026-11-06",
         "quoi": "Répliques finales Eleven v4 (10 répliques, une prise)",
         "credits": 1.61
+      },
+      {
+        "date": "2026-11-06",
+        "quoi": "Version premium : 5 plans Seedance 2.5 720p (40 s, aucune reprise)",
+        "credits": 280
       }
     ],
-    "total_depense": 15.7,
-    "solde": 594.3,
+    "total_depense": 295.7,
+    "solde": 314.3,
     "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus). Eleven v4 : coût selon le nombre de caractères (≈1,61 pour 300 caractères, 2,07 pour ≈420, 4,37 pour ≈920)."
+  },
+  "production_premium": {
+    "modele": "seedance_2_5, mode omni_reference, generate_audio, 720p, 9:16",
+    "references": {
+      "photos": {
+        "salon": "6469316d-1c5e-4fa1-a3f8-34c27a10b747",
+        "coin_repas": "5d1ac7f8-ece4-412b-b8b4-ffde09577c61",
+        "chambre_balcon": "3b580e1c-dbc0-4656-8052-5f1da73e08d0",
+        "placard": "1825574f-b18c-48c7-a3f0-4f8a83d74700"
+      },
+      "echantillons_voix": {
+        "bana": "f7447fd2-e385-44e2-ab14-9b568a398fa2",
+        "mangue": "2bca4cc6-e31e-4852-9d99-6b2b67ae9432",
+        "ananas": "571101bf-adf8-48b0-bc90-ac49d2c42ec4"
+      }
+    },
+    "note": "Les échantillons de voix (extraits des répliques Eleven v4 Elena, Sloane, Caspian) passés en audio_references gardent les mêmes voix d'un plan à l'autre. Phrase obligatoire : « Every spoken line is in French… No music and no score. »",
+    "tarifs_2026_11_06": "720p 7 crédits/s, 1080p 16 crédits/s, brouillon 480p 3 crédits/s"
   }
 }

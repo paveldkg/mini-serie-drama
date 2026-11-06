@@ -1,5 +1,16 @@
 # Épisode 1 « La clé de trop » — livraison
 
+## Version premium animée (à utiliser) — 2026-11-06
+- Fichier : bibliothèque Higgsfield, media_id `1d49bb8f-7372-4c47-b182-c1f4774bf9f8` (44,0 s, 1080x1920, 30 i/s, −14,3 LUFS, contrôle CONFORME).
+- 5 plans Seedance 2.5 réellement animés : fruits qui jouent et se parlent en français (voix Elena, Sloane, Caspian), caméra en mouvement, pièces du Studio Kyoto.
+- Résolution de génération 720p, mise à l'échelle en 1080x1920 (pas de 1080p natif : 608 crédits pour une seule prise).
+- Pas de mention IA sur la carte finale : **activer l'étiquette TikTok « contenu généré par IA » à la publication.**
+- Coût : 280 crédits (estimation 280, aucune reprise).
+
+---
+
+## Version économique (refusée, conservée pour l'historique)
+
 ## Vidéo
 - Fichier : bibliothèque Higgsfield, vidéo « DKG-La-Cle-de-Trop-ep01.mp4 » (media_id 3cfba7bf-8820-42b3-9675-db001fd6a0e1) — 1080x1920, 9:16, 30 i/s, 34,0 s, −14 LUFS.
 - État : rendu et contrôlé (`video4k.py controler` : CONFORME) ; grille interne 100/100 (règles de montage, **pas** une prédiction d'audience).
