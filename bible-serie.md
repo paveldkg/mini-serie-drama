@@ -79,5 +79,10 @@
 - [verifie] Fiche de réservation directe : dkgguesthouse.com/logement/studio-kyoto-t8i2 — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
 
 ## Épisodes
+- Ép. 1 « La clé de trop » — Mademoiselle Mangue arrive au Studio Kyoto ; Bana lui fait visiter le salon, le coin repas, la chambre avec balcon et le placard. Une feuille d'ananas sur l'oreiller : Monsieur Ananas est pourtant parti. Sa silhouette apparaît devant la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe. · Cliffhanger : TOC TOC TOC à la porte d'entrée, flash, fondu au noir.
 
 ## Fils ouverts
+- Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)
+- Qui a refermé le coffre-fort, et avec quel code ?
+- Monsieur Ananas a-t-il gardé une clé ?
+- Pourquoi la feuille d'ananas sur l'oreiller ?

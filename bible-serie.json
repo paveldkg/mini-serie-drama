@@ -391,7 +391,27 @@
       "date": "2026-11-06"
     }
   ],
-  "episodes": [],
+  "episodes": [
+    {
+      "numero": 1,
+      "titre": "La clé de trop",
+      "date": "2026-11-06",
+      "resume": "Mademoiselle Mangue arrive au Studio Kyoto ; Bana lui fait visiter le salon, le coin repas, la chambre avec balcon et le placard. Une feuille d'ananas sur l'oreiller : Monsieur Ananas est pourtant parti. Sa silhouette apparaît devant la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe.",
+      "cliffhanger": "TOC TOC TOC à la porte d'entrée, flash, fondu au noir.",
+      "voix": {
+        "Bana": "Elena (elevenlabs_v4)",
+        "Mangue": "Sloane (elevenlabs_v4)",
+        "Ananas": "Caspian (elevenlabs_v4)"
+      },
+      "fichier": "Bac à sable Higgsfield /home/user/tsv/ep01/exports/episode-social-916.mp4",
+      "fils_ouverts": [
+        "Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)",
+        "Qui a refermé le coffre-fort, et avec quel code ?",
+        "Monsieur Ananas a-t-il gardé une clé ?",
+        "Pourquoi la feuille d'ananas sur l'oreiller ?"
+      ]
+    }
+  ],
   "arc": [
     {
       "numero": 1,
@@ -429,7 +449,12 @@
       "pitch": "Conclusion et appel à réserver sur dkgguesthouse.com."
     }
   ],
-  "fils_ouverts": [],
+  "fils_ouverts": [
+    "Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)",
+    "Qui a refermé le coffre-fort, et avec quel code ?",
+    "Monsieur Ananas a-t-il gardé une clé ?",
+    "Pourquoi la feuille d'ananas sur l'oreiller ?"
+  ],
   "credits": {
     "plafond_ep01": 16,
     "depense": [
