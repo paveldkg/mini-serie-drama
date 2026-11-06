@@ -1,81 +1,384 @@
 {
-  "episode": {"serie": "La Clé de Trop", "numero": 1, "titre": "La clé de trop", "date": "2026-11-06"},
+  "episode": {
+    "serie": "La Clé de Trop",
+    "numero": 1,
+    "titre": "La clé de trop",
+    "date": "2026-11-06"
+  },
   "mode": "economique (fruits incrustés sur les vraies photos DKG)",
-  "hook": {"texte": "Qui dormait ici ?"},
-  "cliffhanger": {"texte": "À suivre…", "flash": true, "impact": true},
+  "hook": {
+    "texte": "Qui dormait ici ?"
+  },
+  "cliffhanger": {
+    "texte": "À suivre…",
+    "flash": true,
+    "impact": true
+  },
   "cta": "Réserve ton séjour sur dkgguesthouse.com",
   "cta_fait": "SITE_RESERVATION",
-  "carte_finale": {"fond": "assets/graphiques/carte-finale.png", "texte": "dkgguesthouse.com", "sous_texte": "À suivre…"},
+  "carte_finale": {
+    "fond": "assets/graphiques/carte-finale.png",
+    "texte": "dkgguesthouse.com",
+    "sous_texte": "À suivre…"
+  },
   "accent": "#FF3130",
   "sous_titres_hauteur": 0.66,
   "musique_debut": 0,
-  "musique": {"description": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net à 25 s (indice)", "source": "Higgsfield elevenlabs_music_v2_5 (à générer après accord)", "licence": "à vérifier : usage commercial du forfait Higgsfield Pro", "statut": "a_trouver"},
+  "musique": {
+    "description": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net à 25 s (indice)",
+    "source": "Higgsfield elevenlabs_music_v2_5 (à générer après accord)",
+    "licence": "à vérifier : usage commercial du forfait Higgsfield Pro",
+    "statut": "a_trouver"
+  },
   "statut_voix": "a_generer",
   "test_ab": "Hook A « Qui dormait ici ? » (question) contre hook B : gros plan silencieux sur la feuille d'ananas + « Il est parti… »",
   "plans": [
-    {"id": "E01", "clip": "chambre-balcon.jpg", "duree": 1.9, "fonction": "hook",
-     "action": "Nuit. Gros plan : Bana sur le lit, face caméra, regarde à gauche puis à droite et chuchote.",
-     "cadrage": "gros plan, chambre réelle en fond", "zoom": "in", "cadre": [0.42, 0.58, 0.85], "etalonnage": "nuit", "transition": "coupe", "son": "coup sourd, puis silence",
-     "replique": {"perso": "Bana", "texte": "Quelqu'un a dormi ici.", "decalage": 0.1},
-     "personnage_incruste": {"image": "assets/personnages/bana-chuchote.png", "taille": 0.52, "position": [0.58, 0.62]}},
-    {"id": "E02", "clip": "couloir-porte-entree.jpg", "duree": 2.0, "fonction": "tension",
-     "action": "Jour. Couloir et porte d'entrée : Mademoiselle Mangue arrive avec sa petite valise.",
-     "cadrage": "plan large du couloir réel", "zoom": "in", "texte": "Plus tôt…", "transition": "coupe", "son": "thème de la série démarre, roulettes de valise",
-     "personnage_incruste": {"image": "assets/personnages/mangue-arrivee.png", "taille": 0.36, "position": [0.52, 0.62]}},
-    {"id": "E03", "clip": "salon.jpg", "duree": 3.4, "fonction": "decor",
-     "action": "Le salon réel : lustres dorés, canapé crème, TV. Mangue, sur le canapé, enlève ses lunettes, éblouie.",
-     "cadrage": "plan large du salon", "zoom": "out", "transition": "coupe", "son": "« ting » discret",
-     "faits_utilises": ["DECORS_REELS", "EQUIP_TV", "EQUIP_CLIM"],
-     "replique": {"perso": "Mangue", "texte": "Wouah… Ça, c'est du premium."},
-     "personnage_incruste": {"image": "assets/personnages/mangue-arrivee.png", "taille": 0.32, "position": [0.38, 0.61]}},
-    {"id": "E04", "clip": "coin-repas-frigo.jpg", "duree": 3.2, "fonction": "decor",
-     "action": "Coin repas réel et grand frigo noir. Bana, debout sur la table, présente la pièce d'un geste.",
-     "cadrage": "plan moyen", "zoom": "in", "transition": "coupe", "son": "petit « clink »",
-     "faits_utilises": ["DECORS_REELS", "EQUIP_FRIGO", "EQUIP_CLIM"],
-     "replique": {"perso": "Bana", "texte": "Coin repas, grand frigo… et la clim."},
-     "personnage_incruste": {"image": "assets/personnages/bana-visite.png", "taille": 0.30, "position": [0.66, 0.57]}},
-    {"id": "E05", "clip": "chambre-balcon.jpg", "duree": 2.8, "fonction": "decor",
-     "action": "Jour. Chambre réelle, baie vitrée vers le balcon. Mangue sur le lit, ravie.",
-     "cadrage": "plan large de la chambre", "zoom": "in", "transition": "coupe", "son": "ambiance de ville douce",
-     "faits_utilises": ["DECORS_REELS", "EQUIP_BALCON"],
-     "replique": {"perso": "Mangue", "texte": "Une chambre avec balcon ?"},
-     "personnage_incruste": {"image": "assets/personnages/mangue-arrivee.png", "taille": 0.32, "position": [0.30, 0.62]}},
-    {"id": "E06", "clip": "chambre-placard-coffre.jpg", "duree": 2.8, "fonction": "decor",
-     "action": "Placard réel : peignoirs, coffre-fort, fer et planche à repasser. Bana, sur le lit, les montre.",
-     "cadrage": "plan moyen sur le placard", "zoom": "in", "transition": "coupe", "son": "glissement de porte coulissante",
-     "faits_utilises": ["DECORS_REELS", "EQUIP_PEIGNOIRS", "EQUIP_COFFRE", "EQUIP_REPASSAGE"],
-     "replique": {"perso": "Bana", "texte": "Peignoirs, coffre-fort, fer à repasser…"},
-     "personnage_incruste": {"image": "assets/personnages/bana-visite.png", "taille": 0.30, "position": [0.78, 0.62]}},
-    {"id": "E07", "clip": "chambre-balcon.jpg", "duree": 2.6, "fonction": "indice",
-     "action": "Gros plan sur l'oreiller : une feuille de couronne d'ananas posée dessus. La musique s'arrête net.",
-     "cadrage": "gros plan sur l'oreiller (recadrage de la photo réelle)", "zoom": "in", "zoom_amplitude": 0.08, "cadre": [0.16, 0.6, 0.5], "etalonnage": "tension", "transition": "coupe", "son": "la musique s'arrête net",
-     "replique": {"perso": "Mangue", "texte": "Bana… c'est quoi, ça ?"},
-     "personnage_incruste": {"image": "assets/personnages/feuille-ananas.png", "taille": 0.30, "position": [0.30, 0.55], "anime": false}},
-    {"id": "E08", "clip": "chambre-balcon.jpg", "duree": 2.0, "fonction": "tension",
-     "action": "Bana, sur le lit, se décompose.",
-     "cadrage": "plan rapproché", "zoom": "in", "cadre": [0.35, 0.6, 0.75], "etalonnage": "tension", "transition": "coupe", "son": "nappe grave",
-     "replique": {"perso": "Bana", "texte": "Il est parti, pourtant !"},
-     "personnage_incruste": {"image": "assets/personnages/bana-choquee.png", "taille": 0.40, "position": [0.45, 0.62]}},
-    {"id": "E09", "clip": "chambre-balcon.jpg", "duree": 3.3, "fonction": "revelation",
-     "action": "Nuit. Silhouette à couronne en pointes devant la baie vitrée, visage invisible.",
-     "cadrage": "plan moyen sur la baie vitrée réelle", "zoom": "in", "cadre": [0.62, 0.52, 0.7], "etalonnage": "nuit", "transition": "coupe", "son": "vent léger, ville au loin",
-     "replique": {"perso": "Ananas", "texte": "Certaines clés… ne se rendent jamais."},
-     "personnage_incruste": {"image": "assets/personnages/ananas-profil.png", "taille": 0.30, "position": [0.52, 0.62], "silhouette": true, "anime": false}},
-    {"id": "E10", "clip": "chambre-placard-coffre.jpg", "duree": 1.5, "fonction": "indice",
-     "action": "Nuit. Gros plan sur le coffre-fort réel : bip, il se verrouille tout seul.",
-     "cadrage": "gros plan (recadrage de la photo réelle)", "zoom": "in", "zoom_amplitude": 0.08, "cadre": [0.33, 0.57, 0.45], "etalonnage": "tension", "transition": "coupe", "son": "bip de verrouillage du coffre"},
-    {"id": "E11", "clip": "chambre-balcon.jpg", "duree": 2.2, "fonction": "tension",
-     "action": "Nuit. Mangue, inquiète, serre sa clé.",
-     "cadrage": "plan rapproché", "zoom": "in", "cadre": [0.35, 0.6, 0.75], "etalonnage": "nuit", "transition": "coupe", "son": "silence",
-     "replique": {"perso": "Mangue", "texte": "J'ai la seule clé… non ?"},
-     "personnage_incruste": {"image": "assets/personnages/mangue-inquiete.png", "taille": 0.42, "position": [0.45, 0.62]}},
-    {"id": "E12", "clip": "couloir-porte-entree.jpg", "duree": 1.3, "fonction": "cliffhanger",
-     "action": "Nuit. Gros plan sur la porte d'entrée réelle : TOC TOC TOC. Flash, fondu au noir.",
-     "cadrage": "gros plan sur la porte (recadrage de la photo réelle)", "zoom": "in", "zoom_amplitude": 0.12, "cadre": [0.645, 0.515, 0.4], "etalonnage": "nuit", "transition": "fondu_noir", "son": "TOC TOC TOC, impact grave"},
-    {"id": "E13", "clip": "../graphiques/carte-finale.png", "source": "graphique", "duree": 5.0, "fonction": "fin",
-     "action": "Carte finale : logo DKG, « Réserve ton séjour sur », dkgguesthouse.com en grand, « À suivre… », « Personnages générés par IA ».",
-     "cadrage": "carte graphique", "zoom": "aucun", "transition": "coupe", "son": "fin du thème",
-     "faits_utilises": ["SITE_RESERVATION"],
-     "replique": {"perso": "Bana", "texte": "Ta clé t'attend sur dkgguesthouse point com.", "decalage": 0.6}}
+    {
+      "id": "E01",
+      "clip": "chambre-balcon.jpg",
+      "duree": 1.9,
+      "fonction": "hook",
+      "action": "Nuit. Gros plan : Bana sur le lit, face caméra, regarde à gauche puis à droite et chuchote.",
+      "cadrage": "gros plan, chambre réelle en fond",
+      "zoom": "in",
+      "cadre": [
+        0.42,
+        0.58,
+        0.85
+      ],
+      "etalonnage": "nuit",
+      "transition": "coupe",
+      "son": "coup sourd, puis silence",
+      "replique": {
+        "perso": "Bana",
+        "texte": "Quelqu'un a dormi ici.",
+        "decalage": 0.1
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/bana-chuchote.png",
+        "taille": 0.385,
+        "position": [
+          0.58,
+          0.62
+        ],
+        "hauteur_ecran": 0.55
+      }
+    },
+    {
+      "id": "E02",
+      "clip": "couloir-porte-entree.jpg",
+      "duree": 2.0,
+      "fonction": "tension",
+      "action": "Jour. Couloir et porte d'entrée : Mademoiselle Mangue arrive avec sa petite valise.",
+      "cadrage": "plan large du couloir réel",
+      "zoom": "in",
+      "texte": "Plus tôt…",
+      "transition": "coupe",
+      "son": "thème de la série démarre, roulettes de valise",
+      "personnage_incruste": {
+        "image": "assets/personnages/mangue-arrivee.png",
+        "taille": 0.295,
+        "position": [
+          0.52,
+          0.62
+        ],
+        "hauteur_ecran": 0.3
+      }
+    },
+    {
+      "id": "E03",
+      "clip": "salon.jpg",
+      "duree": 3.4,
+      "fonction": "decor",
+      "action": "Le salon réel : lustres dorés, canapé crème, TV. Mangue, sur le canapé, enlève ses lunettes, éblouie.",
+      "cadrage": "plan large du salon",
+      "zoom": "out",
+      "transition": "coupe",
+      "son": "« ting » discret",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_TV",
+        "EQUIP_CLIM"
+      ],
+      "replique": {
+        "perso": "Mangue",
+        "texte": "Wouah… Ça, c'est du premium."
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/mangue-arrivee.png",
+        "taille": 0.236,
+        "position": [
+          0.38,
+          0.61
+        ],
+        "hauteur_ecran": 0.24
+      }
+    },
+    {
+      "id": "E04",
+      "clip": "coin-repas-frigo.jpg",
+      "duree": 3.2,
+      "fonction": "decor",
+      "action": "Coin repas réel et grand frigo noir. Bana, debout sur la table, présente la pièce d'un geste.",
+      "cadrage": "plan moyen",
+      "zoom": "in",
+      "transition": "coupe",
+      "son": "petit « clink »",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_FRIGO",
+        "EQUIP_CLIM"
+      ],
+      "replique": {
+        "perso": "Bana",
+        "texte": "Coin repas, grand frigo… et la clim."
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/bana-visite.png",
+        "taille": 0.219,
+        "position": [
+          0.66,
+          0.57
+        ],
+        "hauteur_ecran": 0.22
+      }
+    },
+    {
+      "id": "E05",
+      "clip": "chambre-balcon.jpg",
+      "duree": 2.8,
+      "fonction": "decor",
+      "action": "Jour. Chambre réelle, baie vitrée vers le balcon. Mangue sur le lit, ravie.",
+      "cadrage": "plan large de la chambre",
+      "zoom": "in",
+      "transition": "coupe",
+      "son": "ambiance de ville douce",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_BALCON"
+      ],
+      "replique": {
+        "perso": "Mangue",
+        "texte": "Une chambre avec balcon ?"
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/mangue-arrivee.png",
+        "taille": 0.236,
+        "position": [
+          0.3,
+          0.62
+        ],
+        "hauteur_ecran": 0.24
+      }
+    },
+    {
+      "id": "E06",
+      "clip": "chambre-placard-coffre.jpg",
+      "duree": 2.8,
+      "fonction": "decor",
+      "action": "Placard réel : peignoirs, coffre-fort, fer et planche à repasser. Bana, sur le lit, les montre.",
+      "cadrage": "plan moyen sur le placard",
+      "zoom": "in",
+      "transition": "coupe",
+      "son": "glissement de porte coulissante",
+      "faits_utilises": [
+        "DECORS_REELS",
+        "EQUIP_PEIGNOIRS",
+        "EQUIP_COFFRE",
+        "EQUIP_REPASSAGE"
+      ],
+      "replique": {
+        "perso": "Bana",
+        "texte": "Peignoirs, coffre-fort, fer à repasser…"
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/bana-visite.png",
+        "taille": 0.238,
+        "position": [
+          0.78,
+          0.62
+        ],
+        "hauteur_ecran": 0.24
+      }
+    },
+    {
+      "id": "E07",
+      "clip": "chambre-balcon.jpg",
+      "duree": 2.6,
+      "fonction": "indice",
+      "action": "Gros plan sur l'oreiller : une feuille de couronne d'ananas posée dessus. La musique s'arrête net.",
+      "cadrage": "gros plan sur l'oreiller (recadrage de la photo réelle)",
+      "zoom": "in",
+      "zoom_amplitude": 0.08,
+      "cadre": [
+        0.16,
+        0.6,
+        0.5
+      ],
+      "etalonnage": "tension",
+      "transition": "coupe",
+      "son": "la musique s'arrête net",
+      "replique": {
+        "perso": "Mangue",
+        "texte": "Bana… c'est quoi, ça ?"
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/feuille-ananas.png",
+        "taille": 0.3,
+        "position": [
+          0.3,
+          0.55
+        ],
+        "anime": false
+      }
+    },
+    {
+      "id": "E08",
+      "clip": "chambre-balcon.jpg",
+      "duree": 2.0,
+      "fonction": "tension",
+      "action": "Bana, sur le lit, se décompose.",
+      "cadrage": "plan rapproché",
+      "zoom": "in",
+      "cadre": [
+        0.35,
+        0.6,
+        0.75
+      ],
+      "etalonnage": "tension",
+      "transition": "coupe",
+      "son": "nappe grave",
+      "replique": {
+        "perso": "Bana",
+        "texte": "Il est parti, pourtant !"
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/bana-choquee.png",
+        "taille": 0.226,
+        "position": [
+          0.45,
+          0.62
+        ],
+        "hauteur_ecran": 0.4
+      }
+    },
+    {
+      "id": "E09",
+      "clip": "chambre-balcon.jpg",
+      "duree": 3.3,
+      "fonction": "revelation",
+      "action": "Nuit. Silhouette à couronne en pointes devant la baie vitrée, visage invisible.",
+      "cadrage": "plan moyen sur la baie vitrée réelle",
+      "zoom": "in",
+      "cadre": [
+        0.62,
+        0.52,
+        0.7
+      ],
+      "etalonnage": "nuit",
+      "transition": "coupe",
+      "son": "vent léger, ville au loin",
+      "replique": {
+        "perso": "Ananas",
+        "texte": "Certaines clés… ne se rendent jamais."
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/ananas-profil.png",
+        "taille": 0.137,
+        "position": [
+          0.52,
+          0.62
+        ],
+        "silhouette": true,
+        "anime": false,
+        "hauteur_ecran": 0.3
+      }
+    },
+    {
+      "id": "E10",
+      "clip": "chambre-placard-coffre.jpg",
+      "duree": 1.5,
+      "fonction": "indice",
+      "action": "Nuit. Gros plan sur le coffre-fort réel : bip, il se verrouille tout seul.",
+      "cadrage": "gros plan (recadrage de la photo réelle)",
+      "zoom": "in",
+      "zoom_amplitude": 0.08,
+      "cadre": [
+        0.33,
+        0.57,
+        0.45
+      ],
+      "etalonnage": "tension",
+      "transition": "coupe",
+      "son": "bip de verrouillage du coffre"
+    },
+    {
+      "id": "E11",
+      "clip": "chambre-balcon.jpg",
+      "duree": 2.2,
+      "fonction": "tension",
+      "action": "Nuit. Mangue, inquiète, serre sa clé.",
+      "cadrage": "plan rapproché",
+      "zoom": "in",
+      "cadre": [
+        0.35,
+        0.6,
+        0.75
+      ],
+      "etalonnage": "nuit",
+      "transition": "coupe",
+      "son": "silence",
+      "replique": {
+        "perso": "Mangue",
+        "texte": "J'ai la seule clé… non ?"
+      },
+      "personnage_incruste": {
+        "image": "assets/personnages/mangue-inquiete.png",
+        "taille": 0.346,
+        "position": [
+          0.45,
+          0.62
+        ],
+        "hauteur_ecran": 0.4
+      }
+    },
+    {
+      "id": "E12",
+      "clip": "couloir-porte-entree.jpg",
+      "duree": 1.3,
+      "fonction": "cliffhanger",
+      "action": "Nuit. Gros plan sur la porte d'entrée réelle : TOC TOC TOC. Flash, fondu au noir.",
+      "cadrage": "gros plan sur la porte (recadrage de la photo réelle)",
+      "zoom": "in",
+      "zoom_amplitude": 0.12,
+      "cadre": [
+        0.645,
+        0.515,
+        0.4
+      ],
+      "etalonnage": "nuit",
+      "transition": "fondu_noir",
+      "son": "TOC TOC TOC, impact grave"
+    },
+    {
+      "id": "E13",
+      "clip": "../graphiques/carte-finale.png",
+      "source": "graphique",
+      "duree": 5.0,
+      "fonction": "fin",
+      "action": "Carte finale : logo DKG, « Réserve ton séjour sur », dkgguesthouse.com en grand, « À suivre… », « Personnages générés par IA ».",
+      "cadrage": "carte graphique",
+      "zoom": "aucun",
+      "transition": "coupe",
+      "son": "fin du thème",
+      "faits_utilises": [
+        "SITE_RESERVATION"
+      ],
+      "replique": {
+        "perso": "Bana",
+        "texte": "Ta clé t'attend sur dkgguesthouse point com.",
+        "decalage": 0.6
+      }
+    }
   ]
 }
