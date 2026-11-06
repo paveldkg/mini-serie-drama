@@ -12,7 +12,8 @@
   "cliffhanger": {
     "texte": "À suivre…",
     "flash": true,
-    "impact": true
+    "impact": true,
+    "t": 29.05
   },
   "cta": "Réserve ton séjour sur dkgguesthouse.com",
   "cta_fait": "SITE_RESERVATION",
@@ -437,5 +438,7 @@
         "type": "toc"
       }
     ]
-  }
+  },
+  "titres_en_finitions": true,
+  "titres_hauteur": 0.22
 }

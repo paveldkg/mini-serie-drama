@@ -200,7 +200,6 @@
       "statut_media": "disponible",
       "transition": "coupe",
       "son": "coup sourd, puis silence",
-      "texte_ecran": "Qui dormait ici ?",
       "voix_off": "Quelqu'un a dormi ici."
     },
     {
@@ -213,8 +212,7 @@
       "source": "client",
       "statut_media": "disponible",
       "transition": "coupe",
-      "son": "thème de la série démarre, roulettes de valise",
-      "texte_ecran": "Plus tôt…"
+      "son": "thème de la série démarre, roulettes de valise"
     },
     {
       "id": "S3",

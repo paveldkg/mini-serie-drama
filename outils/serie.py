@@ -388,7 +388,9 @@ def cmd_projet(a):
               "action": p.get("action", ""), "plan": p.get("cadrage", "plan vertical"), "mouvement": f"zoom léger {p.get('zoom', 'in')}",
               "source": p.get("source") or ("generation" if p.get("genere") else "client"), "statut_media": "disponible", "transition": p.get("transition", "coupe"),
               "son": p.get("son", "")}
-        if i == 1 and d.get("hook", {}).get("texte"):
+        if d.get("titres_en_finitions"):
+            pass  # titres posés par « serie.py finitions », en haut de l'image (pas de chevauchement avec les sous-titres)
+        elif i == 1 and d.get("hook", {}).get("texte"):
             sc["texte_ecran"] = d["hook"]["texte"]
         elif p.get("texte"):
             sc["texte_ecran"] = p["texte"]
@@ -471,8 +473,16 @@ def cmd_finitions(a):
     L = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {w}", f"PlayResY: {h}", "WrapStyle: 2", "ScaledBorderAndShadow: yes", "", "[V4+ Styles]",
          "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
          f"Style: Mot,{fam},{int(80 * u)},&H00FFFFFF,&H00FFFFFF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,{max(2, int(5 * u))},{max(1, int(2 * u))},5,{int(70 * u)},{int(70 * u)},0,1",
+ f"Style: Titre,{fam},{int(88 * u)},&H00FFFFFF,&H00FFFFFF,&H00101010,&H78000000,-1,0,0,0,100,100,0,0,1,{max(2, int(6 * u))},{max(1, int(3 * u))},5,{int(70 * u)},{int(70 * u)},0,1",
          "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     y = int(h * float(d.get("sous_titres_hauteur", 0.66)))
+    if d.get("titres_en_finitions"):
+        yt = int(h * float(d.get("titres_hauteur", 0.22)))
+        for k, (t0, t1, p) in enumerate(tl[:-1]):
+            titre = (d.get("hook", {}).get("texte") if k == 0 else "") or p.get("texte", "")
+            if titre:
+                debut = t0 if k == 0 else t0 + 0.15  # le hook est lisible dès la première image
+                L.append(f"Dialogue: 1,{t_ass(debut)},{t_ass(t1 - 0.05)},Titre,,0,0,0,,{{\\pos({w // 2},{yt})\\fad({0 if k == 0 else 180},150)}}" + titre.replace("{", "(").replace("}", ")"))
     if a.mots and os.path.exists(a.mots):
         mots = [m for m in charger(a.mots)["mots"] if m["debut"] < fin_contenu]
         G = groupes(mots)
@@ -489,7 +499,7 @@ def cmd_finitions(a):
                 L.append(f"Dialogue: 0,{t_ass(t0)},{t_ass(t1)},Mot,,0,0,0,,{{\\pos({w // 2},{y})}}{pop}" + " ".join(parts))
     ass = tempfile.mktemp(suffix=".ass")
     open(ass, "w", encoding="utf-8").write("\n".join(L) + "\n")
-    t_cliff = fin_contenu
+    t_cliff = float(d.get("cliffhanger", {}).get("t", fin_contenu))  # flash + impact : juste après les coups, avant le fondu au noir
     vf = [f"subtitles='{ass}'" + (f":fontsdir='{os.path.dirname(fp)}'" if fp else "")]
     if d.get("cliffhanger", {}).get("flash", True):
         vf.append(f"drawbox=x=0:y=0:w=iw:h=ih:color=white@0.85:t=fill:enable='between(t,{t_cliff - 0.05:.2f},{t_cliff + 0.07:.2f})'")
