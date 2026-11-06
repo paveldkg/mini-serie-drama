@@ -11,18 +11,32 @@
     "pitch": "Dans un appartement DKG à Douala, Mademoiselle Mangue découvre qu'un ancien client, Monsieur Ananas, a peut-être gardé une clé. Bana la concierge et Petit Safou mènent l'enquête, pièce après pièce.",
     "ton": "drame / mystère, premium, jamais enfantin",
     "style": "Fruits en 3D premium style long métrage, incrustés sur les VRAIES photos de l'appartement DKG ; étalonnage chaud le jour, bleu nuit pour le mystère.",
-    "palette": ["#111418", "#FFFFFF", "#FF3130"],
+    "palette": [
+      "#111418",
+      "#FFFFFF",
+      "#FF3130"
+    ],
     "accent_justification": "Rouge du logo DKG (échantillonné : #FF3130) : une seule couleur d'accent, qui sert aussi le suspense.",
     "police": "Montserrat ExtraBold (sous-titres et textes)",
-    "duree_cible_s": [30, 45],
+    "duree_cible_s": [
+      30,
+      45
+    ],
     "format": "9:16 1080x1920, 30 i/s, -14 LUFS",
     "cta": "Réserve ton séjour sur dkgguesthouse.com",
     "cta_secondaire": "Lien en bio (quand le compte TikTok sera connecté et le lien en bio vérifié)",
     "cible": "Adultes voyageurs (affaires, diaspora, familles en visite) qui cherchent un logement meublé à Douala ; pas de ciblage des moins de 13 ans",
     "promesse": "Un appartement meublé DKG, tel qu'il est vraiment, à réserver sur dkgguesthouse.com",
     "benefice": "Voir les vraies pièces avant de réserver, au fil d'une intrigue",
-    "objections": ["Est-ce que l'appartement ressemble aux photos ? (réponse : décors 100 % réels)", "Comment réserver ? (réponse : demande sur dkgguesthouse.com, confirmation sur WhatsApp)"],
-    "logo": {"statut": "fourni_client", "fichier": "assets/logo/dkg-guest-house.png", "note": "Version sans fond attendue ; d'ici là, carte finale sur fond #191919 (identique au fond du logo)."},
+    "objections": [
+      "Est-ce que l'appartement ressemble aux photos ? (réponse : décors 100 % réels)",
+      "Comment réserver ? (réponse : demande sur dkgguesthouse.com, confirmation sur WhatsApp)"
+    ],
+    "logo": {
+      "statut": "fourni_client",
+      "fichier": "assets/logo/dkg-guest-house.png",
+      "note": "Version sans fond attendue ; d'ici là, carte finale sur fond #191919 (identique au fond du logo)."
+    },
     "regles": [
       "Décors : toujours les vraies photos DKG (assets/decor-photos/). Seuls les fruits (et une feuille d'ananas, partie du personnage) sont générés.",
       "Étalonnage autorisé (couleur, lumière de nuit), jamais de retouche des meubles, murs, vue ou équipements.",
@@ -43,13 +57,49 @@
       "caractere": "Chaleureuse, rapide, un peu commère, rassurante mais vite paniquée.",
       "parler": "Confidences chuchotées (« Psst… »), phrases courtes, humour léger. Signature : « Chez DKG, rien ne m'échappe… enfin, presque. »",
       "apparence": "Banane jaune mûre, petites taches brunes, gilet de concierge bleu marine, épingle clé dorée, trousseau de clés doré. Voir prompts/personnages.md.",
-      "image_ref": {"job_id": "a90ee988-44fd-45cc-b6a7-2d1222e9ba66", "modele": "nano_banana_2", "statut": "valide"},
+      "image_ref": {
+        "job_id": "a90ee988-44fd-45cc-b6a7-2d1222e9ba66",
+        "modele": "nano_banana_2",
+        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+      },
       "poses_sans_fond": [
-        {"id": "bana-chuchote", "usage": "hook, carte finale", "fichier": "assets/personnages/bana-chuchote.png", "statut": "a_generer"},
-        {"id": "bana-visite", "usage": "visite des pièces (geste de présentation)", "fichier": "assets/personnages/bana-visite.png", "statut": "a_generer"},
-        {"id": "bana-choquee", "usage": "réaction à l'indice", "fichier": "assets/personnages/bana-choquee.png", "statut": "a_generer"}
+        {
+          "id": "bana-chuchote",
+          "usage": "hook, carte finale",
+          "fichier": "assets/personnages/bana-chuchote.png",
+          "statut": "a_generer"
+        },
+        {
+          "id": "bana-visite",
+          "usage": "visite des pièces (geste de présentation)",
+          "fichier": "assets/personnages/bana-visite.png",
+          "statut": "a_generer"
+        },
+        {
+          "id": "bana-choquee",
+          "usage": "réaction à l'indice",
+          "fichier": "assets/personnages/bana-choquee.png",
+          "statut": "a_generer"
+        }
       ],
-      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "féminine, chaleureuse, rapide, expressive, pointe d'humour", "statut": "a_choisir"}
+      "voix": {
+        "nom": "Elena",
+        "modele": "seed_audio",
+        "voice_id": "ca83ca7f-c186-493d-bd69-0d765fa861b2",
+        "reglages": {
+          "speech_rate": 0,
+          "pitch_rate": 0,
+          "loudness_rate": 0
+        },
+        "brief": "féminine, chaleureuse, rapide, expressive, pointe d'humour",
+        "statut": "proposee (à valider à l'écoute par Pavel)",
+        "voice_type": "preset",
+        "echantillon_job_id": "00a9cb05-dabb-4c2b-bd4c-c64d649eb423",
+        "test_intelligibilite": "fr 0,92 — « Psst! Quelqu'un a dormi ici et c'était pas moi. » (transcription exacte)",
+        "alternatives": [
+          "Marisol 75e72cd5-011b-4130-a474-e8b1ab341f04 (fr 0,65, trop lente : 7,6 s)"
+        ]
+      }
     },
     {
       "id": "mangue",
@@ -59,12 +109,43 @@
       "caractere": "Glamour, exigeante, théâtrale, un brin snob, vulnérable quand elle a peur.",
       "parler": "Posée, dramatique, appuie les mots. Signature : « Je ne dors que dans le premium, chérie. »",
       "apparence": "Mangue dégradée vert-orange-rouge, longs cils, lunettes de soleil sur la tête, foulard wax orange et turquoise, petite valise crème. Voir prompts/personnages.md.",
-      "image_ref": {"job_id": "9ca202de-5141-4b77-9c36-3c895fbddcec", "modele": "nano_banana_2", "statut": "valide"},
+      "image_ref": {
+        "job_id": "9ca202de-5141-4b77-9c36-3c895fbddcec",
+        "modele": "nano_banana_2",
+        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+      },
       "poses_sans_fond": [
-        {"id": "mangue-arrivee", "usage": "arrivée avec valise, émerveillée", "fichier": "assets/personnages/mangue-arrivee.png", "statut": "a_generer"},
-        {"id": "mangue-inquiete", "usage": "indice, « J'ai la seule clé… non ? »", "fichier": "assets/personnages/mangue-inquiete.png", "statut": "a_generer"}
+        {
+          "id": "mangue-arrivee",
+          "usage": "arrivée avec valise, émerveillée",
+          "fichier": "assets/personnages/mangue-arrivee.png",
+          "statut": "a_generer"
+        },
+        {
+          "id": "mangue-inquiete",
+          "usage": "indice, « J'ai la seule clé… non ? »",
+          "fichier": "assets/personnages/mangue-inquiete.png",
+          "statut": "a_generer"
+        }
       ],
-      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "féminine, posée, théâtrale, un brin snob", "statut": "a_choisir"}
+      "voix": {
+        "nom": "Giselle",
+        "modele": "seed_audio",
+        "voice_id": "9d3128b8-dd25-5158-9bdb-2e69ac8998b9",
+        "reglages": {
+          "speech_rate": 0,
+          "pitch_rate": 0,
+          "loudness_rate": 0
+        },
+        "brief": "féminine, posée, théâtrale, un brin snob",
+        "statut": "proposee (à valider à l'écoute par Pavel)",
+        "voice_type": "preset",
+        "echantillon_job_id": "d072f143-d4cd-4d54-94a4-cee63981309d",
+        "test_intelligibilite": "fr 0,95 — « Je ne dors que dans le premium, chérie! » (transcription exacte)",
+        "alternatives": [
+          "Vesper c3204739-4084-41a3-9dc5-c805b307ec18 (fr 0,62)"
+        ]
+      }
     },
     {
       "id": "ananas",
@@ -74,12 +155,43 @@
       "caractere": "Élégant, énigmatique, ambigu (ni méchant ni gentil jusqu'à la révélation).",
       "parler": "Grave, lent, velouté, presque chuchoté. Signature : « Certaines clés… ne se rendent jamais. »",
       "apparence": "Ananas, couronne verte en pointes, yeux dorés en amande, demi-sourire, blazer anthracite, fine chaîne dorée, vieille clé en laiton. Voir prompts/personnages.md.",
-      "image_ref": {"job_id": "6ff5dd4c-c716-424d-9d59-8002523db032", "modele": "nano_banana_2", "statut": "valide"},
+      "image_ref": {
+        "job_id": "6ff5dd4c-c716-424d-9d59-8002523db032",
+        "modele": "nano_banana_2",
+        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+      },
       "poses_sans_fond": [
-        {"id": "ananas-profil", "usage": "silhouette devant la baie vitrée (noircie au montage) ; plus tard visage révélé", "fichier": "assets/personnages/ananas-profil.png", "statut": "a_generer"},
-        {"id": "feuille-ananas", "usage": "indice sur l'oreiller (accessoire du personnage)", "fichier": "assets/personnages/feuille-ananas.png", "statut": "a_generer"}
+        {
+          "id": "ananas-profil",
+          "usage": "silhouette devant la baie vitrée (noircie au montage) ; plus tard visage révélé",
+          "fichier": "assets/personnages/ananas-profil.png",
+          "statut": "a_generer"
+        },
+        {
+          "id": "feuille-ananas",
+          "usage": "indice sur l'oreiller (accessoire du personnage)",
+          "fichier": "assets/personnages/feuille-ananas.png",
+          "statut": "a_generer"
+        }
       ],
-      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "masculine, grave, lente, veloutée, presque chuchotée", "statut": "a_choisir"}
+      "voix": {
+        "nom": "Desmond",
+        "modele": "seed_audio",
+        "voice_id": "563f728c-e249-5a85-97ab-8461e8c09da6",
+        "reglages": {
+          "speech_rate": 0,
+          "pitch_rate": 0,
+          "loudness_rate": 0
+        },
+        "brief": "masculine, grave, lente, veloutée, presque chuchotée",
+        "statut": "proposee (à valider à l'écoute par Pavel)",
+        "voice_type": "preset",
+        "echantillon_job_id": "7c163a17-310b-46f7-ac42-133eb1ea4df4",
+        "test_intelligibilite": "fr 0,63 — « certaines clés ne seront jamais » (légère élision)",
+        "alternatives": [
+          "Sterling dc382508-c8bd-443c-8cb2-46e57b8d2e6f (fr 0,58)"
+        ]
+      }
     },
     {
       "id": "safou",
@@ -89,51 +201,255 @@
       "caractere": "Espiègle, énergique, fait les découvertes et les gaffes. Rendu premium, pas enfantin (jeune adulte, pas un enfant).",
       "parler": "Vif, aigu, rires espiègles. Signature : « Indice numéro un ! »",
       "apparence": "Petit safou violet foncé brillant, mini trench beige, loupe. Voir prompts/personnages.md.",
-      "image_ref": {"job_id": "1e83134a-6f83-4cb8-8748-1a54cee34de3", "modele": "nano_banana_2", "statut": "valide"},
+      "image_ref": {
+        "job_id": "1e83134a-6f83-4cb8-8748-1a54cee34de3",
+        "modele": "nano_banana_2",
+        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+      },
       "poses_sans_fond": [],
-      "voix": {"nom": "", "modele": "seed_audio", "voice_id": "", "reglages": {}, "brief": "jeune adulte, vive, énergique", "statut": "a_choisir (épisode 2)"}
+      "voix": {
+        "nom": "",
+        "modele": "seed_audio",
+        "voice_id": "",
+        "reglages": {},
+        "brief": "jeune adulte, vive, énergique",
+        "statut": "a_choisir (épisode 2)"
+      }
     }
   ],
   "lieux": [
-    {"id": "salon", "nom": "Salon", "description": "Canapé d'angle crème, table basse en trois plateaux, lustres cage dorés, faux plafond lumineux, TV, clim, sol marbre noir.", "clips": ["assets/decor-photos/salon.jpg"]},
-    {"id": "coin-repas", "nom": "Coin repas et frigo", "description": "Grand réfrigérateur américain noir, table blanche et deux chaises camel, suspension trois lanternes.", "clips": ["assets/decor-photos/coin-repas-frigo.jpg"]},
-    {"id": "chambre", "nom": "Chambre avec balcon", "description": "Lit tête arrondie en velours, coussins brodés, baie vitrée coulissante vers le balcon, rideaux dorés, clim, fauteuil.", "clips": ["assets/decor-photos/chambre-balcon.jpg"]},
-    {"id": "placard", "nom": "Placard de la chambre", "description": "Placard coulissant : peignoirs, coffre-fort, fer et planche à repasser.", "clips": ["assets/decor-photos/chambre-placard-coffre.jpg"]},
-    {"id": "couloir", "nom": "Couloir et porte d'entrée", "description": "Couloir blanc, tableau, sol marbre noir, porte d'entrée en bois sombre au fond.", "clips": ["assets/decor-photos/couloir-porte-entree.jpg"]}
+    {
+      "id": "salon",
+      "nom": "Salon",
+      "description": "Canapé d'angle crème, table basse en trois plateaux, lustres cage dorés, faux plafond lumineux, TV, clim, sol marbre noir.",
+      "clips": [
+        "assets/decor-photos/salon.jpg"
+      ],
+      "logement": "Studio Kyoto (Bonamoussadi)"
+    },
+    {
+      "id": "coin-repas",
+      "nom": "Coin repas et frigo",
+      "description": "Grand réfrigérateur américain noir, table blanche et deux chaises camel, suspension trois lanternes.",
+      "clips": [
+        "assets/decor-photos/coin-repas-frigo.jpg"
+      ],
+      "logement": "Studio Kyoto (Bonamoussadi)"
+    },
+    {
+      "id": "chambre",
+      "nom": "Chambre avec balcon",
+      "description": "Lit tête arrondie en velours, coussins brodés, baie vitrée coulissante vers le balcon, rideaux dorés, clim, fauteuil.",
+      "clips": [
+        "assets/decor-photos/chambre-balcon.jpg"
+      ],
+      "logement": "Studio Kyoto (Bonamoussadi)"
+    },
+    {
+      "id": "placard",
+      "nom": "Placard de la chambre",
+      "description": "Placard coulissant : peignoirs, coffre-fort, fer et planche à repasser.",
+      "clips": [
+        "assets/decor-photos/chambre-placard-coffre.jpg"
+      ],
+      "logement": "Studio Kyoto (Bonamoussadi)"
+    },
+    {
+      "id": "couloir",
+      "nom": "Couloir et porte d'entrée",
+      "description": "Couloir blanc, tableau, sol marbre noir, porte d'entrée en bois sombre au fond.",
+      "clips": [
+        "assets/decor-photos/couloir-porte-entree.jpg"
+      ],
+      "logement": "Studio Kyoto (Bonamoussadi)"
+    },
+    {
+      "id": "kitchenette",
+      "nom": "Kitchenette",
+      "description": "Cuisine équipée avec micro-ondes (photo de la fiche DKG ; pas encore dans assets/decor-photos/).",
+      "clips": [],
+      "logement": "Studio Kyoto (Bonamoussadi)",
+      "statut": "photo HD à fournir par Pavel"
+    }
   ],
   "musique": {
     "theme": "Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net",
     "outil": "Higgsfield elevenlabs_music_v2_5 (40 s)",
     "licence": "à vérifier : conditions d'usage commercial du forfait Higgsfield Pro (texte à archiver avant export final)",
     "verifiee_le": "",
-    "fichier": "",
-    "statut": "a_generer"
+    "fichier": "Higgsfield job 5d31a4c3-8333-423c-9902-f239bde664aa (theme-serie.mp3, 40,0 s, -20 LUFS, montée à ~19 s, arrêt net à 40 s)",
+    "statut": "genere"
   },
   "faits": [
-    {"id": "SITE_RESERVATION", "texte": "Réservation sur dkgguesthouse.com : demande de réservation envoyée depuis la fiche du logement, sans compte, sans paiement en ligne ; DKG vérifie la disponibilité et confirme sur WhatsApp. Réserve ton séjour sur dkgguesthouse.com", "statut": "verifie", "source": "https://dkgguesthouse.com/comment-ca-marche (bouton « Réserver » → /logements)", "date": "2026-11-06"},
-    {"id": "WHATSAPP", "texte": "WhatsApp DKG : +237 699 60 17 08, assistance 7j/7 de 8 h à 22 h", "statut": "verifie", "source": "https://dkgguesthouse.com/contact", "date": "2026-11-06"},
-    {"id": "DECORS_REELS", "texte": "Les décors sont les vraies photos d'un appartement DKG fournies par DKG", "statut": "verifie", "source": "assets/decor-photos/ (photos fournies par Pavel)", "date": "2026-11-06"},
-    {"id": "EQUIP_CLIM", "texte": "clim visible au salon et dans la chambre", "statut": "verifie", "source": "photos salon.jpg, chambre-balcon.jpg", "date": "2026-11-06"},
-    {"id": "EQUIP_TV", "texte": "TV visible au salon", "statut": "verifie", "source": "photo salon.jpg", "date": "2026-11-06"},
-    {"id": "EQUIP_COFFRE", "texte": "coffre-fort dans le placard de la chambre", "statut": "verifie", "source": "photo chambre-placard-coffre.jpg", "date": "2026-11-06"},
-    {"id": "EQUIP_PEIGNOIRS", "texte": "peignoirs dans le placard", "statut": "verifie", "source": "photo chambre-placard-coffre.jpg", "date": "2026-11-06"},
-    {"id": "EQUIP_REPASSAGE", "texte": "fer à repasser et planche à repasser", "statut": "verifie", "source": "photo chambre-placard-coffre.jpg", "date": "2026-11-06"},
-    {"id": "EQUIP_FRIGO", "texte": "grand frigo (réfrigérateur américain) au coin repas", "statut": "verifie", "source": "photo coin-repas-frigo.jpg", "date": "2026-11-06"},
-    {"id": "EQUIP_BALCON", "texte": "chambre avec balcon (baie vitrée coulissante)", "statut": "verifie", "source": "photo chambre-balcon.jpg", "date": "2026-11-06"},
-    {"id": "LIEN_BIO", "texte": "Le lien en bio mène à la réservation DKG", "statut": "a_fournir", "note": "Compte TikTok non connecté (tiktok_accounts vide le 2026-11-06)."},
-    {"id": "WIFI", "texte": "wifi", "statut": "a_fournir"},
-    {"id": "GROUPE_ELECTROGENE", "texte": "groupe électrogène", "statut": "a_fournir"},
-    {"id": "LOGEMENT_FICHE", "texte": "Fiche dkgguesthouse.com correspondant à l'appartement des photos (quartier, capacité, prix)", "statut": "a_fournir", "note": "Le site liste 20+ logements (Bonamoussadi, Bonapriso, Logpom, Makepe, Bastos…) ; il faut savoir lequel est photographié avant d'en citer le quartier ou le prix."}
+    {
+      "id": "SITE_RESERVATION",
+      "texte": "Réservation sur dkgguesthouse.com : demande de réservation envoyée depuis la fiche du logement, sans compte, sans paiement en ligne ; DKG vérifie la disponibilité et confirme sur WhatsApp. Réserve ton séjour sur dkgguesthouse.com",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/comment-ca-marche (bouton « Réserver » → /logements)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "WHATSAPP",
+      "texte": "WhatsApp DKG : +237 699 60 17 08, assistance 7j/7 de 8 h à 22 h",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/contact",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "DECORS_REELS",
+      "texte": "Les décors sont les vraies photos d'un appartement DKG fournies par DKG",
+      "statut": "verifie",
+      "source": "assets/decor-photos/ (photos fournies par Pavel)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_CLIM",
+      "texte": "clim visible au salon et dans la chambre",
+      "statut": "verifie",
+      "source": "photos salon.jpg, chambre-balcon.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_TV",
+      "texte": "TV visible au salon",
+      "statut": "verifie",
+      "source": "photo salon.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_COFFRE",
+      "texte": "coffre-fort dans le placard de la chambre",
+      "statut": "verifie",
+      "source": "photo chambre-placard-coffre.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_PEIGNOIRS",
+      "texte": "peignoirs dans le placard",
+      "statut": "verifie",
+      "source": "photo chambre-placard-coffre.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_REPASSAGE",
+      "texte": "fer à repasser et planche à repasser",
+      "statut": "verifie",
+      "source": "photo chambre-placard-coffre.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_FRIGO",
+      "texte": "grand frigo (réfrigérateur américain) au coin repas",
+      "statut": "verifie",
+      "source": "photo coin-repas-frigo.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "EQUIP_BALCON",
+      "texte": "chambre avec balcon (baie vitrée coulissante)",
+      "statut": "verifie",
+      "source": "photo chambre-balcon.jpg",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "LIEN_BIO",
+      "texte": "Le lien en bio mène à la réservation DKG",
+      "statut": "a_fournir",
+      "note": "Compte TikTok non connecté (tiktok_accounts vide le 2026-11-06)."
+    },
+    {
+      "id": "LOGEMENT_FICHE",
+      "texte": "Les décors sont le Studio Kyoto, Bonamoussadi, Douala — studio, 2 voyageurs",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "QUARTIER",
+      "texte": "Bonamoussadi, Douala",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06"
+    },
+    {
+      "id": "KYOTO_EQUIPEMENTS",
+      "texte": "Studio Kyoto, équipements déclarés sur la fiche : Wi-Fi Starlink, climatisation, eau chaude, parking, gardien, groupe électrogène, Canal+, Netflix, machine à laver, cuisine équipée, réfrigérateur, micro-ondes, balcon, télévision",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06",
+      "note": "Déclaration de DKG sur sa fiche, non constatée sur nos photos pour wifi, groupe électrogène, parking, gardien, Canal+, Netflix, machine à laver. Pavel avait demandé confirmation : à confirmer par lui avant usage à l'écran."
+    },
+    {
+      "id": "KYOTO_PRIX",
+      "texte": "Studio Kyoto : 34 999 FCFA / nuit en semaine, 40 000 FCFA vendredi et samedi",
+      "statut": "hypothese",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06",
+      "note": "Prix susceptible de changer : ne pas l'afficher dans la vidéo ni les légendes."
+    },
+    {
+      "id": "LIEN_FICHE",
+      "texte": "Fiche de réservation directe : dkgguesthouse.com/logement/studio-kyoto-t8i2",
+      "statut": "verifie",
+      "source": "https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06)",
+      "date": "2026-11-06"
+    }
   ],
   "episodes": [],
   "arc": [
-    {"numero": 1, "titre": "La clé de trop", "pitch": "Mangue arrive ; feuille d'ananas sur l'oreiller ; Ananas aurait gardé une clé ; on frappe."},
-    {"numero": 2, "titre": "Qui frappe ?", "pitch": "C'est Petit Safou ; le coffre-fort a été refermé avec un code inconnu."},
-    {"numero": 3, "titre": "Le frigo", "pitch": "Dans le grand frigo, un mot : « Je reviens à minuit — A. »"},
-    {"numero": 4, "titre": "Minuit au salon", "pitch": "Ombre d'une couronne au mur, la télé s'allume seule."},
-    {"numero": 5, "titre": "Le balcon", "pitch": "Safou suit une piste jusqu'au balcon de la chambre."},
-    {"numero": 6, "titre": "La vérité", "pitch": "Ananas a tant aimé son séjour qu'il a voulu revenir."},
-    {"numero": 7, "titre": "La prochaine clé, c'est la tienne", "pitch": "Conclusion et appel à réserver sur dkgguesthouse.com."}
+    {
+      "numero": 1,
+      "titre": "La clé de trop",
+      "pitch": "Mangue arrive ; feuille d'ananas sur l'oreiller ; Ananas aurait gardé une clé ; on frappe."
+    },
+    {
+      "numero": 2,
+      "titre": "Qui frappe ?",
+      "pitch": "C'est Petit Safou ; le coffre-fort a été refermé avec un code inconnu."
+    },
+    {
+      "numero": 3,
+      "titre": "Le frigo",
+      "pitch": "Dans le grand frigo, un mot : « Je reviens à minuit — A. »"
+    },
+    {
+      "numero": 4,
+      "titre": "Minuit au salon",
+      "pitch": "Ombre d'une couronne au mur, la télé s'allume seule."
+    },
+    {
+      "numero": 5,
+      "titre": "Le balcon",
+      "pitch": "Safou suit une piste jusqu'au balcon de la chambre."
+    },
+    {
+      "numero": 6,
+      "titre": "La vérité",
+      "pitch": "Ananas a tant aimé son séjour qu'il a voulu revenir."
+    },
+    {
+      "numero": 7,
+      "titre": "La prochaine clé, c'est la tienne",
+      "pitch": "Conclusion et appel à réserver sur dkgguesthouse.com."
+    }
   ],
-  "fils_ouverts": []
+  "fils_ouverts": [],
+  "credits": {
+    "plafond_ep01": 13,
+    "depense": [
+      {
+        "date": "2026-11-06",
+        "quoi": "13 échantillons de voix seed_audio (facturés 0,3-0,4 chacun, selon la longueur)",
+        "credits": 4.2
+      },
+      {
+        "date": "2026-11-06",
+        "quoi": "Thème musical elevenlabs_music_v2_5 40 s",
+        "credits": 5.82
+      }
+    ],
+    "total_depense": 10.02,
+    "solde": 599.98,
+    "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus)."
+  }
 }

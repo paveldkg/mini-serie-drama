@@ -22,7 +22,7 @@
 - Caractère : Chaleureuse, rapide, un peu commère, rassurante mais vite paniquée.
 - Façon de parler : Confidences chuchotées (« Psst… »), phrases courtes, humour léger. Signature : « Chez DKG, rien ne m'échappe… enfin, presque. »
 - Apparence (prompt figé) : Banane jaune mûre, petites taches brunes, gilet de concierge bleu marine, épingle clé dorée, trousseau de clés doré. Voir prompts/personnages.md.
-- Voix :  (seed_audio, voice_id , réglages {}) — statut a_choisir
+- Voix : Elena (seed_audio, voice_id ca83ca7f-c186-493d-bd69-0d765fa861b2, réglages {'speech_rate': 0, 'pitch_rate': 0, 'loudness_rate': 0}) — statut proposee (à valider à l'écoute par Pavel)
 - Image de référence : à générer
 
 ### Mademoiselle Mangue — mangue
@@ -30,7 +30,7 @@
 - Caractère : Glamour, exigeante, théâtrale, un brin snob, vulnérable quand elle a peur.
 - Façon de parler : Posée, dramatique, appuie les mots. Signature : « Je ne dors que dans le premium, chérie. »
 - Apparence (prompt figé) : Mangue dégradée vert-orange-rouge, longs cils, lunettes de soleil sur la tête, foulard wax orange et turquoise, petite valise crème. Voir prompts/personnages.md.
-- Voix :  (seed_audio, voice_id , réglages {}) — statut a_choisir
+- Voix : Giselle (seed_audio, voice_id 9d3128b8-dd25-5158-9bdb-2e69ac8998b9, réglages {'speech_rate': 0, 'pitch_rate': 0, 'loudness_rate': 0}) — statut proposee (à valider à l'écoute par Pavel)
 - Image de référence : à générer
 
 ### Monsieur Ananas — ananas
@@ -38,7 +38,7 @@
 - Caractère : Élégant, énigmatique, ambigu (ni méchant ni gentil jusqu'à la révélation).
 - Façon de parler : Grave, lent, velouté, presque chuchoté. Signature : « Certaines clés… ne se rendent jamais. »
 - Apparence (prompt figé) : Ananas, couronne verte en pointes, yeux dorés en amande, demi-sourire, blazer anthracite, fine chaîne dorée, vieille clé en laiton. Voir prompts/personnages.md.
-- Voix :  (seed_audio, voice_id , réglages {}) — statut a_choisir
+- Voix : Desmond (seed_audio, voice_id 563f728c-e249-5a85-97ab-8461e8c09da6, réglages {'speech_rate': 0, 'pitch_rate': 0, 'loudness_rate': 0}) — statut proposee (à valider à l'écoute par Pavel)
 - Image de référence : à générer
 
 ### Petit Safou — safou (prune africaine)
@@ -55,6 +55,7 @@
 - Chambre avec balcon : Lit tête arrondie en velours, coussins brodés, baie vitrée coulissante vers le balcon, rideaux dorés, clim, fauteuil. — clips : assets/decor-photos/chambre-balcon.jpg
 - Placard de la chambre : Placard coulissant : peignoirs, coffre-fort, fer et planche à repasser. — clips : assets/decor-photos/chambre-placard-coffre.jpg
 - Couloir et porte d'entrée : Couloir blanc, tableau, sol marbre noir, porte d'entrée en bois sombre au fond. — clips : assets/decor-photos/couloir-porte-entree.jpg
+- Kitchenette : Cuisine équipée avec micro-ondes (photo de la fiche DKG ; pas encore dans assets/decor-photos/). — clips : 
 
 ## Musique
 - Thème mystère de la série, instrumental, ≈ 100 bpm, pizzicato + percussions légères, arrêt net · outil Higgsfield elevenlabs_music_v2_5 (40 s) · licence à vérifier : conditions d'usage commercial du forfait Higgsfield Pro (texte à archiver avant export final) (vérifiée le )
@@ -71,9 +72,11 @@
 - [verifie] grand frigo (réfrigérateur américain) au coin repas — source photo coin-repas-frigo.jpg, 2026-11-06
 - [verifie] chambre avec balcon (baie vitrée coulissante) — source photo chambre-balcon.jpg, 2026-11-06
 - [a_fournir] Le lien en bio mène à la réservation DKG
-- [a_fournir] wifi
-- [a_fournir] groupe électrogène
-- [a_fournir] Fiche dkgguesthouse.com correspondant à l'appartement des photos (quartier, capacité, prix)
+- [verifie] Les décors sont le Studio Kyoto, Bonamoussadi, Douala — studio, 2 voyageurs — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
+- [verifie] Bonamoussadi, Douala — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
+- [verifie] Studio Kyoto, équipements déclarés sur la fiche : Wi-Fi Starlink, climatisation, eau chaude, parking, gardien, groupe électrogène, Canal+, Netflix, machine à laver, cuisine équipée, réfrigérateur, micro-ondes, balcon, télévision — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
+- [hypothese] Studio Kyoto : 34 999 FCFA / nuit en semaine, 40 000 FCFA vendredi et samedi — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
+- [verifie] Fiche de réservation directe : dkgguesthouse.com/logement/studio-kyoto-t8i2 — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
 
 ## Épisodes
 

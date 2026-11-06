@@ -21,3 +21,14 @@ Risque : Kling régénère l'image et peut altérer le décor réel → chaque p
 
 ## Montage, export, contrôle
 Gratuit : bac à sable Higgsfield (ffmpeg) et moteurs `serie.py` / `video4k.py`.
+
+## Dépenses réelles (mise à jour 2026-11-06, 09 h 10)
+
+| Poste | Prévu | Réel |
+|---|---|---|
+| Échantillons de voix (9 prévus ; 13 faits, dont 3 de rattrapage pour Bana et 1 de plus) | 1,80 | **4,20** (seed_audio facturé 0,3-0,4 selon la longueur, pas 0,2) |
+| Thème musical 40 s | 5,82 | 5,82 |
+| Poses sans fond | 1,75 | 0 (non soumises : images de référence introuvables sur ce compte) |
+| **Total dépensé** | | **10,02** — solde 599,98 |
+
+Reste à faire : 7 poses (1,75) + 10 répliques (≈ 0,3 chacune réellement, ≈ 3,0) ≈ **4,75** → dépasse le plafond de 13 de ≈ 1,8. Extension demandée : plafond porté à **16 crédits**.
