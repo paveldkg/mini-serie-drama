@@ -67,7 +67,13 @@ def main():
         f = os.path.join(D, cl["fichier"])
         d0, d1 = float(cl.get("debut", 0)), float(cl.get("fin") or duree(f))
         entrees += ["-i", f]
-        fv.append(f"[{i}:v]trim={d0}:{d1},setpts=PTS-STARTPTS,scale={W}:{H}:flags=lanczos,unsharp=5:5:0.6,fps={FPS},setsar=1,format=yuv420p[v{i}]")
+        et = ""
+        for e in cl.get("etalonnage", []):  # ex. {"de": 6.0, "a": 10.1, "type": "nuit"} — temps du clip source
+            en = f"enable='between(t,{float(e['de']) - d0:.2f},{float(e['a']) - d0:.2f})'"
+            if e.get("type", "nuit") == "nuit":
+                et += (f",eq=brightness=-0.13:contrast=1.08:saturation=0.62:gamma=0.88:{en}"
+                       f",colorbalance=bs=0.16:bm=0.07:rs=-0.05:rm=-0.03:{en}")
+        fv.append(f"[{i}:v]trim={d0}:{d1},setpts=PTS-STARTPTS{et},scale={W}:{H}:flags=lanczos,unsharp=5:5:0.6,fps={FPS},setsar=1,format=yuv420p[v{i}]")
         fa.append(f"[{i}:a]atrim={d0}:{d1},asetpts=PTS-STARTPTS,aformat=sample_rates=48000:channel_layouts=stereo[a{i}]")
         bornes.append((t, t + d1 - d0, cl, d0, d1))
         t += d1 - d0
