@@ -56,6 +56,16 @@
         "Un balcon ? Je reste !",
         "De l'ananas… dans mon lit ?",
         "Impossible… il est parti ce matin !"
+      ],
+      "remplacements": [
+        {
+          "de": 3.85,
+          "a": 6.6,
+          "fichier": "mangue-ananas.wav",
+          "a_partir": 4.15,
+          "gain_db": 0,
+          "raison": "le modèle vidéo prononçait « de la Nice » ; même voix (Sloane, Eleven v4), job 620b749c-83d1-47e3-896c-7eba7e75d06b"
+        }
       ]
     },
     {

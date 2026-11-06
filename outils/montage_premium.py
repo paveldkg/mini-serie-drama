@@ -96,7 +96,8 @@ def main():
                 et += (f",eq=brightness=-0.13:contrast=1.08:saturation=0.62:gamma=0.88:{en}"
                        f",colorbalance=bs=0.16:bm=0.07:rs=-0.05:rm=-0.03:{en}")
         fv.append(f"[{i}:v]trim={d0}:{d1},setpts=PTS-STARTPTS{et},scale={W}:{H}:flags=lanczos,unsharp=5:5:0.6,fps={FPS},setsar=1,format=yuv420p[v{i}]")
-        fa.append(f"[{i}:a]atrim={d0}:{d1},asetpts=PTS-STARTPTS,aformat=sample_rates=48000:channel_layouts=stereo[a{i}]")
+        lab = f"a{i}r" if cl.get("remplacements") else f"a{i}"
+        fa.append(f"[{i}:a]atrim={d0}:{d1},asetpts=PTS-STARTPTS,aformat=sample_rates=48000:channel_layouts=stereo[{lab}]")
         bornes.append((t, t + d1 - d0, cl, d0, d1))
         t += d1 - d0
     fin_clips = t
@@ -136,6 +137,24 @@ def main():
         fa.append("[dlg][musd]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[afilm]")
     else:
         fa.append("[dlg]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[afilm]")
+
+    # 3 bis. répliques remplacées (ex. un mot mal prononcé par le modèle vidéo) : la piste d'origine est baissée sur
+    # l'intervalle et la nouvelle prise, même voix, est posée à l'instant de la réplique (temps du clip source)
+    for i, cl in enumerate(clips):
+        rs = cl.get("remplacements") or []
+        if not rs:
+            continue
+        d0 = float(cl.get("debut", 0))
+        chaine, mixes = f"[a{i}r]", []
+        for k, r in enumerate(rs):
+            chaine += f"volume=0.08:enable='between(t,{float(r['de']) - d0:.2f},{float(r['a']) - d0:.2f})',"
+            idx = entrees.count("-i")
+            entrees += ["-i", os.path.join(D, r["fichier"])]
+            ms = int((float(r["a_partir"]) - d0) * 1000)
+            fa.append(f"[{idx}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={r.get('gain_db', 0)}dB,adelay={ms}|{ms}[r{i}_{k}]")
+            mixes.append(f"[r{i}_{k}]")
+        fa.append(chaine.rstrip(",") + f"[a{i}m]")
+        fa.append(f"[a{i}m]" + "".join(mixes) + f"amix=inputs={1 + len(mixes)}:normalize=0:duration=first[a{i}]")
 
     # 4. sous-titres mot à mot (whisper par clip) + titres en haut
     from faster_whisper import WhisperModel
