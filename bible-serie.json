@@ -47,7 +47,9 @@
       "Une police, une couleur d'accent (#FF3130), coupes sèches, un fondu au noir avant la carte finale, aucun émoji à l'écran.",
       "Aucune dépense ni publication sans l'accord explicite de Pavel.",
       "Carte finale : logo DKG, « Réserve ton séjour sur dkgguesthouse.com », « À suivre… ». Pas de mention IA sur l'image (décision de Pavel, 2026-11-06) : l'étiquette TikTok « contenu généré par IA » est OBLIGATOIRE à chaque publication.",
-      "Décors : les vraies photos servent de référence au modèle vidéo (décision de Pavel, 2026-11-06) ; vérifier à chaque plan que la pièce reste reconnaissable et qu'aucun équipement non vérifié n'apparaît."
+      "Décors : les vraies photos servent de référence au modèle vidéo (décision de Pavel, 2026-11-06) ; vérifier à chaque plan que la pièce reste reconnaissable et qu'aucun équipement non vérifié n'apparaît.",
+      "Mise en scène : les fruits sont à taille humaine et se comportent comme des personnes (debout au sol, assis sur un canapé ou au bord du lit) ; jamais debout sur un meuble (retour de Pavel, 2026-11-06).",
+      "Prononciation : préciser dans chaque prompt « standard French, slowly and very clearly » ; vérifier chaque plan avec faster-whisper medium ; un mot mal dit se corrige au montage par une réplique Eleven v4 de la même voix (champ remplacements)."
     ]
   },
   "personnages": [
@@ -404,8 +406,8 @@
       "numero": 1,
       "titre": "La clé de trop",
       "date": "2026-11-06",
-      "resume": "Bana chuchote qu'on a dormi dans la chambre. Plus tôt : Mangue arrive au Studio Kyoto, Bana lui fait visiter le salon, le coin repas et la chambre. Mangue trouve une feuille d'ananas sur l'oreiller ; Monsieur Ananas est pourtant parti. Sa silhouette apparaît derrière la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe.",
-      "cliffhanger": "TOC TOC TOC à la porte d'entrée, flash, fondu au noir.",
+      "resume": "Bana chuchote qu'on a dormi dans la chambre. Plus tôt : Bana accueille Mademoiselle Mangue à la porte et lui remet la clé, rendue le matin même par Monsieur Ananas. Visite du salon et du coin repas. Dans la chambre, le lit est défait et une couronne d'ananas est posée sur l'oreiller. Derrière la baie vitrée, la silhouette d'Ananas : « J'ai rendu une clé… mais j'en avais deux. » Le coffre se verrouille seul, Mangue comprend qu'une deuxième clé existe… et on frappe.",
+      "cliffhanger": "Une deuxième clé existe ; trois coups à la porte de la chambre, flash, noir.",
       "voix": {
         "Bana": "Elena (elevenlabs_v4)",
         "Mangue": "Sloane (elevenlabs_v4)",
@@ -413,10 +415,9 @@
       },
       "fichier": "Bac à sable Higgsfield /home/user/tsv/ep01/exports/episode-social-916.mp4",
       "fils_ouverts": [
-        "Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)",
-        "Qui a refermé le coffre-fort, et avec quel code ?",
-        "Monsieur Ananas a-t-il gardé une clé ?",
-        "Pourquoi la feuille d'ananas sur l'oreiller ?"
+        "Qui frappe à la porte ? (ép. 2 : Petit Safou)",
+        "Qui a la deuxième clé, et pourquoi Ananas l'a gardée ?",
+        "Qui a verrouillé le coffre, et avec quel code ?"
       ],
       "video_higgsfield_media_id": "3cfba7bf-8820-42b3-9675-db001fd6a0e1",
       "statut": "rendu et contrôlé, non publié",
@@ -431,11 +432,31 @@
           "C4": "f20e2cf9-3593-4835-baf9-ffeb827f46a6",
           "C5": "9ef8760f-ccc0-4bb1-8f90-e1de58d610ab"
         },
-        "statut": "rendue et contrôlée (CONFORME), non publiée"
+        "statut": "remplacée par la v2"
       },
       "version_economique": {
         "media_id": "3cfba7bf-8820-42b3-9675-db001fd6a0e1",
         "statut": "refusée par Pavel (trop statique)"
+      },
+      "version_premium_v2": {
+        "media_id": "05468fa4-3ffd-4fde-877e-1dc5504e1e63",
+        "duree_s": 45.0,
+        "lufs": -13.7,
+        "statut": "rendue et contrôlée (CONFORME), non publiée",
+        "clips_job_ids": {
+          "C1": "18d57ddb-83b7-4712-b23a-9c889261caf7",
+          "C2": "99729da6-e0bf-4265-bda8-9d39ac1d3e18",
+          "C3": "9ddf8811-af30-4634-b008-e967b3d1e588",
+          "C4": "2a686d51-f811-4c23-9a63-e88b3946b8b8",
+          "C5": "fca3d5ae-8ec9-4b0b-81bf-8594fd08611e"
+        },
+        "corrections": [
+          "histoire centrée sur la deuxième clé",
+          "fruits à taille humaine, plus personne debout sur les meubles",
+          "couronne d'ananas reconnaissable (job 04e08c28-1a44-4605-8ffb-a4ae70c34285)",
+          "noms des personnages affichés à leur arrivée",
+          "« De l'ananas… » remplacé par une prise Eleven v4 (Sloane)"
+        ]
       }
     }
   ],
@@ -477,10 +498,9 @@
     }
   ],
   "fils_ouverts": [
-    "Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)",
-    "Qui a refermé le coffre-fort, et avec quel code ?",
-    "Monsieur Ananas a-t-il gardé une clé ?",
-    "Pourquoi la feuille d'ananas sur l'oreiller ?"
+    "Qui frappe à la porte ? (ép. 2 : Petit Safou)",
+    "Qui a la deuxième clé, et pourquoi Ananas l'a gardée ?",
+    "Qui a verrouillé le coffre, et avec quel code ?"
   ],
   "credits": {
     "plafond_ep01": 16,
@@ -514,10 +534,15 @@
         "date": "2026-11-06",
         "quoi": "Version premium : 5 plans Seedance 2.5 720p (40 s, aucune reprise)",
         "credits": 280
+      },
+      {
+        "date": "2026-11-06",
+        "quoi": "Version premium v2 : 4 plans refaits + reprise de l'indice + couronne d'ananas + réplique Eleven v4",
+        "credits": 308.48
       }
     ],
-    "total_depense": 295.7,
-    "solde": 314.3,
+    "total_depense": 604.18,
+    "solde": 5.82,
     "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus). Eleven v4 : coût selon le nombre de caractères (≈1,61 pour 300 caractères, 2,07 pour ≈420, 4,37 pour ≈920)."
   },
   "production_premium": {

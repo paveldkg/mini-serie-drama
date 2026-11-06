@@ -15,6 +15,8 @@
 - Aucune dépense ni publication sans l'accord explicite de Pavel.
 - Carte finale : logo DKG, « Réserve ton séjour sur dkgguesthouse.com », « À suivre… ». Pas de mention IA sur l'image (décision de Pavel, 2026-11-06) : l'étiquette TikTok « contenu généré par IA » est OBLIGATOIRE à chaque publication.
 - Décors : les vraies photos servent de référence au modèle vidéo (décision de Pavel, 2026-11-06) ; vérifier à chaque plan que la pièce reste reconnaissable et qu'aucun équipement non vérifié n'apparaît.
+- Mise en scène : les fruits sont à taille humaine et se comportent comme des personnes (debout au sol, assis sur un canapé ou au bord du lit) ; jamais debout sur un meuble (retour de Pavel, 2026-11-06).
+- Prononciation : préciser dans chaque prompt « standard French, slowly and very clearly » ; vérifier chaque plan avec faster-whisper medium ; un mot mal dit se corrige au montage par une réplique Eleven v4 de la même voix (champ remplacements).
 
 ## Personnages
 
@@ -80,10 +82,9 @@
 - [verifie] Fiche de réservation directe : dkgguesthouse.com/logement/studio-kyoto-t8i2 — source https://dkgguesthouse.com/logement/studio-kyoto-t8i2 (fiche officielle DKG ; photos de la fiche identiques aux nôtres, comparées le 2026-11-06), 2026-11-06
 
 ## Épisodes
-- Ép. 1 « La clé de trop » — Bana chuchote qu'on a dormi dans la chambre. Plus tôt : Mangue arrive au Studio Kyoto, Bana lui fait visiter le salon, le coin repas et la chambre. Mangue trouve une feuille d'ananas sur l'oreiller ; Monsieur Ananas est pourtant parti. Sa silhouette apparaît derrière la baie vitrée, le coffre se verrouille seul, Mangue doute d'avoir la seule clé… et on frappe. · Cliffhanger : TOC TOC TOC à la porte d'entrée, flash, fondu au noir.
+- Ép. 1 « La clé de trop » — Bana chuchote qu'on a dormi dans la chambre. Plus tôt : Bana accueille Mademoiselle Mangue à la porte et lui remet la clé, rendue le matin même par Monsieur Ananas. Visite du salon et du coin repas. Dans la chambre, le lit est défait et une couronne d'ananas est posée sur l'oreiller. Derrière la baie vitrée, la silhouette d'Ananas : « J'ai rendu une clé… mais j'en avais deux. » Le coffre se verrouille seul, Mangue comprend qu'une deuxième clé existe… et on frappe. · Cliffhanger : Une deuxième clé existe ; trois coups à la porte de la chambre, flash, noir.
 
 ## Fils ouverts
-- Qui frappe à la porte ? (réponse ép. 2 : Petit Safou)
-- Qui a refermé le coffre-fort, et avec quel code ?
-- Monsieur Ananas a-t-il gardé une clé ?
-- Pourquoi la feuille d'ananas sur l'oreiller ?
+- Qui frappe à la porte ? (ép. 2 : Petit Safou)
+- Qui a la deuxième clé, et pourquoi Ananas l'a gardée ?
+- Qui a verrouillé le coffre, et avec quel code ?

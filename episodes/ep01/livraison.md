@@ -1,6 +1,12 @@
 # Épisode 1 « La clé de trop » — livraison
 
-## Version premium animée (à utiliser) — 2026-11-06
+## Version premium v2 (à utiliser) — 2026-11-06
+- Fichier : bibliothèque Higgsfield, media_id `05468fa4-3ffd-4fde-877e-1dc5504e1e63` (45,0 s, 1080x1920, −13,7 LUFS, contrôle CONFORME).
+- Corrections demandées par Pavel : histoire claire (la deuxième clé), fruits à taille humaine (plus personne debout sur la table ni sur le lit),
+  vraie couronne d'ananas, prononciation vérifiée plan par plan (faster-whisper medium), noms des personnages à l'écran.
+- Coût de la v2 : 308,48 crédits. Solde restant : 5,82 crédits.
+
+## Version premium v1 (remplacée)
 - Fichier : bibliothèque Higgsfield, media_id `1d49bb8f-7372-4c47-b182-c1f4774bf9f8` (44,0 s, 1080x1920, 30 i/s, −14,3 LUFS, contrôle CONFORME).
 - 5 plans Seedance 2.5 réellement animés : fruits qui jouent et se parlent en français (voix Elena, Sloane, Caspian), caméra en mouvement, pièces du Studio Kyoto.
 - Résolution de génération 720p, mise à l'échelle en 1080x1920 (pas de 1080p natif : 608 crédits pour une seule prise).
