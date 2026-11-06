@@ -254,7 +254,7 @@ def cmd_voix(a):
     need()
     d = charger(a.decoupage)
     tl = timeline(d)
-    entrees, filt, mots, n = [], [], [], 0
+    entrees, filt, mots, n, lignes = [], [], [], 0, []
     fin = tl[-1][1]
     for t0, t1, p in tl:
         r = p.get("replique") or {}
@@ -277,6 +277,7 @@ def cmd_voix(a):
         mt = r["texte"].split()
         poids = [max(1, len(re.sub(r"\W", "", m))) + 2 for m in mt]
         tot, acc = sum(poids), 0
+        lignes.append((f, debut, len(mots), len(mt)))
         for m, w_ in zip(mt, poids):
             mots.append({"mot": m, "debut": round(debut + dur * acc / tot, 3), "fin": round(debut + dur * (acc + w_) / tot, 3), "perso": r.get("perso", "")})
             acc += w_
@@ -288,13 +289,17 @@ def cmd_voix(a):
     try:
         from faster_whisper import WhisperModel
         mdl = WhisperModel(a.whisper, device="cpu", compute_type="int8")
-        segs, _ = mdl.transcribe(a.o, language="fr", word_timestamps=True, vad_filter=True)
-        wm = [{"mot": w.word.strip(), "debut": round(w.start, 3), "fin": round(w.end, 3)} for s in segs for w in (s.words or [])]
-        if len(wm) >= 0.6 * len(mots):
-            # garder l'orthographe du script, prendre les temps de la voix réelle
-            for i, m in enumerate(mots):
-                j = min(len(wm) - 1, round(i * (len(wm) - 1) / max(1, len(mots) - 1)))
-                m["debut"], m["fin"] = wm[j]["debut"], wm[j]["fin"]
+        cales = 0
+        for f, debut, i0, nb in lignes:  # réplique par réplique : aucune dérive d'une réplique à l'autre
+            segs, _ = mdl.transcribe(f, language="fr", word_timestamps=True)
+            wm = [w for s_ in segs for w in (s_.words or [])]
+            if not wm:
+                continue
+            for k in range(nb):  # orthographe du script, temps de la voix réelle
+                j = min(len(wm) - 1, round(k * (len(wm) - 1) / max(1, nb - 1)))
+                mots[i0 + k]["debut"], mots[i0 + k]["fin"] = round(debut + wm[j].start, 3), round(debut + wm[j].end, 3)
+            cales += 1
+        if cales:
             source = "faster-whisper"
     except Exception:
         pass
