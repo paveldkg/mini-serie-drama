@@ -58,47 +58,46 @@
       "parler": "Confidences chuchotées (« Psst… »), phrases courtes, humour léger. Signature : « Chez DKG, rien ne m'échappe… enfin, presque. »",
       "apparence": "Banane jaune mûre, petites taches brunes, gilet de concierge bleu marine, épingle clé dorée, trousseau de clés doré. Voir prompts/personnages.md.",
       "image_ref": {
-        "job_id": "a90ee988-44fd-45cc-b6a7-2d1222e9ba66",
-        "modele": "nano_banana_2",
-        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+        "job_id": "273de234-2a5a-4ac9-905f-082a79465ee4",
+        "modele": "gpt_image_2_6 (fond transparent, 752x1344)",
+        "statut": "regenere le 2026-11-06 avec l'accord de Pavel (anciens personnages sur un autre compte)",
+        "ancien_job_id": "a90ee988-44fd-45cc-b6a7-2d1222e9ba66"
       },
       "poses_sans_fond": [
         {
           "id": "bana-chuchote",
           "usage": "hook, carte finale",
           "fichier": "assets/personnages/bana-chuchote.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "94690043-83e6-4edb-9f43-fe8a10dc9b21"
         },
         {
           "id": "bana-visite",
           "usage": "visite des pièces (geste de présentation)",
           "fichier": "assets/personnages/bana-visite.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "273de234-2a5a-4ac9-905f-082a79465ee4"
         },
         {
           "id": "bana-choquee",
           "usage": "réaction à l'indice",
           "fichier": "assets/personnages/bana-choquee.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "1013318e-54dc-4cf9-8f2e-b8ae3b5fbd14"
         }
       ],
       "voix": {
-        "nom": "Elena",
-        "modele": "seed_audio",
-        "voice_id": "ca83ca7f-c186-493d-bd69-0d765fa861b2",
-        "reglages": {
-          "speech_rate": 0,
-          "pitch_rate": 0,
-          "loudness_rate": 0
-        },
-        "brief": "féminine, chaleureuse, rapide, expressive, pointe d'humour",
-        "statut": "proposee (à valider à l'écoute par Pavel)",
-        "voice_type": "preset",
-        "echantillon_job_id": "00a9cb05-dabb-4c2b-bd4c-c64d649eb423",
-        "test_intelligibilite": "fr 0,92 — « Psst! Quelqu'un a dormi ici et c'était pas moi. » (transcription exacte)",
-        "alternatives": [
-          "Marisol 75e72cd5-011b-4130-a474-e8b1ab341f04 (fr 0,65, trop lente : 7,6 s)"
-        ]
+        "modele": "elevenlabs_v4 (Eleven v4, français natif)",
+        "candidats": [
+          "Elena ca83ca7f-c186-493d-bd69-0d765fa861b2",
+          "Marisol 75e72cd5-011b-4130-a474-e8b1ab341f04",
+          "Chloe e9cfbbf0-4476-46be-b396-596eb774b165"
+        ],
+        "casting_job_id": "7e24feac-5125-4136-bd81-627b6fcdffa2",
+        "nom": "",
+        "voice_id": "",
+        "statut": "a_choisir par Pavel a l'ecoute",
+        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)"
       }
     },
     {
@@ -110,41 +109,39 @@
       "parler": "Posée, dramatique, appuie les mots. Signature : « Je ne dors que dans le premium, chérie. »",
       "apparence": "Mangue dégradée vert-orange-rouge, longs cils, lunettes de soleil sur la tête, foulard wax orange et turquoise, petite valise crème. Voir prompts/personnages.md.",
       "image_ref": {
-        "job_id": "9ca202de-5141-4b77-9c36-3c895fbddcec",
-        "modele": "nano_banana_2",
-        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+        "job_id": "dfa4f558-bab0-4138-b448-802f4e3fa114",
+        "modele": "gpt_image_2_6 (fond transparent, 752x1344)",
+        "statut": "regenere le 2026-11-06 avec l'accord de Pavel (anciens personnages sur un autre compte)",
+        "ancien_job_id": "9ca202de-5141-4b77-9c36-3c895fbddcec"
       },
       "poses_sans_fond": [
         {
           "id": "mangue-arrivee",
           "usage": "arrivée avec valise, émerveillée",
           "fichier": "assets/personnages/mangue-arrivee.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "dfa4f558-bab0-4138-b448-802f4e3fa114"
         },
         {
           "id": "mangue-inquiete",
           "usage": "indice, « J'ai la seule clé… non ? »",
           "fichier": "assets/personnages/mangue-inquiete.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "a908a90e-750e-4a7e-8e14-0142200804d9"
         }
       ],
       "voix": {
-        "nom": "Giselle",
-        "modele": "seed_audio",
-        "voice_id": "9d3128b8-dd25-5158-9bdb-2e69ac8998b9",
-        "reglages": {
-          "speech_rate": 0,
-          "pitch_rate": 0,
-          "loudness_rate": 0
-        },
-        "brief": "féminine, posée, théâtrale, un brin snob",
-        "statut": "proposee (à valider à l'écoute par Pavel)",
-        "voice_type": "preset",
-        "echantillon_job_id": "d072f143-d4cd-4d54-94a4-cee63981309d",
-        "test_intelligibilite": "fr 0,95 — « Je ne dors que dans le premium, chérie! » (transcription exacte)",
-        "alternatives": [
-          "Vesper c3204739-4084-41a3-9dc5-c805b307ec18 (fr 0,62)"
-        ]
+        "modele": "elevenlabs_v4 (Eleven v4, français natif)",
+        "candidats": [
+          "Vesper c3204739-4084-41a3-9dc5-c805b307ec18",
+          "Giselle 9d3128b8-dd25-5158-9bdb-2e69ac8998b9",
+          "Sloane b57b22a0-f287-405b-bc82-6f08f5e6bb1f"
+        ],
+        "casting_job_id": "7e24feac-5125-4136-bd81-627b6fcdffa2",
+        "nom": "",
+        "voice_id": "",
+        "statut": "a_choisir par Pavel a l'ecoute",
+        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)"
       }
     },
     {
@@ -156,41 +153,39 @@
       "parler": "Grave, lent, velouté, presque chuchoté. Signature : « Certaines clés… ne se rendent jamais. »",
       "apparence": "Ananas, couronne verte en pointes, yeux dorés en amande, demi-sourire, blazer anthracite, fine chaîne dorée, vieille clé en laiton. Voir prompts/personnages.md.",
       "image_ref": {
-        "job_id": "6ff5dd4c-c716-424d-9d59-8002523db032",
-        "modele": "nano_banana_2",
-        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+        "job_id": "f596f0bd-2f82-48fc-b432-266b282a7dd5",
+        "modele": "gpt_image_2_6 (fond transparent, 752x1344)",
+        "statut": "regenere le 2026-11-06 avec l'accord de Pavel (anciens personnages sur un autre compte)",
+        "ancien_job_id": "6ff5dd4c-c716-424d-9d59-8002523db032"
       },
       "poses_sans_fond": [
         {
           "id": "ananas-profil",
           "usage": "silhouette devant la baie vitrée (noircie au montage) ; plus tard visage révélé",
           "fichier": "assets/personnages/ananas-profil.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "f596f0bd-2f82-48fc-b432-266b282a7dd5"
         },
         {
           "id": "feuille-ananas",
           "usage": "indice sur l'oreiller (accessoire du personnage)",
           "fichier": "assets/personnages/feuille-ananas.png",
-          "statut": "a_generer"
+          "statut": "genere",
+          "job_id": "6c534c83-6be2-45dd-aa69-443d9cd249b6"
         }
       ],
       "voix": {
-        "nom": "Desmond",
-        "modele": "seed_audio",
-        "voice_id": "563f728c-e249-5a85-97ab-8461e8c09da6",
-        "reglages": {
-          "speech_rate": 0,
-          "pitch_rate": 0,
-          "loudness_rate": 0
-        },
-        "brief": "masculine, grave, lente, veloutée, presque chuchotée",
-        "statut": "proposee (à valider à l'écoute par Pavel)",
-        "voice_type": "preset",
-        "echantillon_job_id": "7c163a17-310b-46f7-ac42-133eb1ea4df4",
-        "test_intelligibilite": "fr 0,63 — « certaines clés ne seront jamais » (légère élision)",
-        "alternatives": [
-          "Sterling dc382508-c8bd-443c-8cb2-46e57b8d2e6f (fr 0,58)"
-        ]
+        "modele": "elevenlabs_v4 (Eleven v4, français natif)",
+        "candidats": [
+          "Desmond 563f728c-e249-5a85-97ab-8461e8c09da6",
+          "Sterling dc382508-c8bd-443c-8cb2-46e57b8d2e6f",
+          "Caspian ef70cc83-3015-4bad-9359-0ea968c43ec0"
+        ],
+        "casting_job_id": "7e24feac-5125-4136-bd81-627b6fcdffa2",
+        "nom": "",
+        "voice_id": "",
+        "statut": "a_choisir par Pavel a l'ecoute",
+        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)"
       }
     },
     {
@@ -202,9 +197,10 @@
       "parler": "Vif, aigu, rires espiègles. Signature : « Indice numéro un ! »",
       "apparence": "Petit safou violet foncé brillant, mini trench beige, loupe. Voir prompts/personnages.md.",
       "image_ref": {
-        "job_id": "1e83134a-6f83-4cb8-8748-1a54cee34de3",
-        "modele": "nano_banana_2",
-        "statut": "introuvable sur le compte Higgsfield Pro actuel (créé le 2026-11-06) : images à téléverser ou personnages à régénérer"
+        "job_id": "cb1f63ac-6ea4-4f1e-a245-ffc14b8f4cdf",
+        "modele": "gpt_image_2_6 (fond transparent, 752x1344)",
+        "statut": "regenere le 2026-11-06 avec l'accord de Pavel (anciens personnages sur un autre compte)",
+        "ancien_job_id": "1e83134a-6f83-4cb8-8748-1a54cee34de3"
       },
       "poses_sans_fond": [],
       "voix": {
@@ -435,7 +431,7 @@
   ],
   "fils_ouverts": [],
   "credits": {
-    "plafond_ep01": 13,
+    "plafond_ep01": 16,
     "depense": [
       {
         "date": "2026-11-06",
@@ -446,10 +442,20 @@
         "date": "2026-11-06",
         "quoi": "Thème musical elevenlabs_music_v2_5 40 s",
         "credits": 5.82
+      },
+      {
+        "date": "2026-11-06",
+        "quoi": "4 personnages de référence + 4 poses (gpt_image_2_6)",
+        "credits": 2.0
+      },
+      {
+        "date": "2026-11-06",
+        "quoi": "Casting Eleven v4, 9 voix en une prise",
+        "credits": 2.07
       }
     ],
-    "total_depense": 10.02,
-    "solde": 599.98,
-    "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus)."
+    "total_depense": 14.09,
+    "solde": 595.91,
+    "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus). Eleven v4 : coût selon le nombre de caractères (≈1,61 pour 300 caractères, 2,07 pour ≈420, 4,37 pour ≈920)."
   }
 }
