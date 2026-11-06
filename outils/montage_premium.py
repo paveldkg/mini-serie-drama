@@ -34,20 +34,42 @@ def duree(f):
     return float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).strip())
 
 
+def jetons(ligne):
+    """Mots du script ; une ponctuation isolée (« ! », « ? ») reste collée au mot d'avant."""
+    out = []
+    for w in ligne.split():
+        if out and not re.search(r"\w", w):
+            out[-1] += " " + w
+        else:
+            out.append(w)
+    return out
+
+
+def caler(jet, wm, decal):
+    res = []
+    for k, mot in enumerate(jet):
+        j = min(len(wm) - 1, round(k * (len(wm) - 1) / max(1, len(jet) - 1)))
+        res.append({"mot": mot, "debut": round(decal + wm[j].start, 3), "fin": round(decal + wm[j].end, 3)})
+    return res
+
+
 def mots_du_clip(fichier, debut, fin, lignes, decal, modele):
-    """Temps réels (whisper) + orthographe du script : chaque ligne est calée sur un segment parlé du clip."""
-    texte = [w for l in lignes for w in l.split()]
-    if not texte:
+    """Temps réels (whisper) + orthographe du script. Chaque réplique est calée sur son propre segment parlé quand
+    whisper en trouve autant que de répliques ; sinon, sur l'ensemble des mots du clip."""
+    if not lignes:
         return []
     segs, _ = modele.transcribe(fichier, language="fr", word_timestamps=True, beam_size=5)
-    wm = [w for s in segs for w in (s.words or []) if debut - 0.05 <= w.start < fin]
-    out = []
-    if not wm:
+    segs = [s for s in segs if s.words and debut - 0.05 <= s.start < fin]
+    if not segs:
+        return []
+    base = decal - debut
+    if len(segs) == len(lignes):
+        out = []
+        for l, sg in zip(lignes, segs):
+            out += caler(jetons(l), list(sg.words), base)
         return out
-    for k, mot in enumerate(texte):
-        j = min(len(wm) - 1, round(k * (len(wm) - 1) / max(1, len(texte) - 1)))
-        out.append({"mot": mot, "debut": round(decal + wm[j].start - debut, 3), "fin": round(decal + wm[j].end - debut, 3)})
-    return out
+    wm = [w for sg in segs for w in sg.words]
+    return caler([w for l in lignes for w in jetons(l)], wm, base)
 
 
 def main():
