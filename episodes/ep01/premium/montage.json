@@ -49,12 +49,12 @@
     },
     {
       "id": "C4",
-      "fichier": "c4b.mp4",
+      "fichier": "c4c.mp4",
       "debut": 0,
       "fin": 10.0,
       "lignes": [
-        "Une chambre avec balcon ? Je reste !",
-        "Une feuille d'ananas… dans mon lit ?",
+        "Un balcon ? Je reste !",
+        "De l'ananas… dans mon lit ?",
         "Impossible… il est parti ce matin !"
       ]
     },
