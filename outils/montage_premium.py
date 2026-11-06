@@ -150,10 +150,18 @@ def main():
          "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
          f"Style: Mot,{fam},78,&H00FFFFFF,&H00FFFFFF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,5,2,5,70,70,0,1",
          f"Style: Titre,{fam},88,&H00FFFFFF,&H00FFFFFF,&H00101010,&H78000000,-1,0,0,0,100,100,0,0,1,6,3,5,70,70,0,1",
+         f"Style: Nom,{fam},54,&H00FFFFFF,&H00FFFFFF,&H00101010,&H78000000,-1,0,0,0,100,100,0,0,1,4,2,4,70,70,0,1",
          "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     for t0, t1, cl, d0, d1 in bornes:
         if cl.get("titre"):
             L.append(f"Dialogue: 1,{serie.t_ass(t0 + (0 if t0 == 0 else 0.1))},{serie.t_ass(min(t1, t0 + 2.2) - 0.05)},Titre,,0,0,0,,{{\\pos({W // 2},{yt})\\fad({0 if t0 == 0 else 160},160)}}{cl['titre']}")
+    yn = int(H * float(c.get("noms_hauteur", 0.30)))
+    for t0, t1, cl, d0, d1 in bornes:  # nom du personnage à sa première apparition (ex. « Bana · la concierge »)
+        for nm in cl.get("noms", []):
+            n0, n1 = t0 + float(nm["de"]) - d0, min(t1, t0 + float(nm["a"]) - d0)
+            nom, _, role = nm["texte"].partition("·")
+            txt = "{\\c" + serie.ass_col(accent) + "}" + nom.strip() + ("{\\c&H00FFFFFF&} · " + role.strip() if role else "")
+            L.append(f"Dialogue: 1,{serie.t_ass(n0)},{serie.t_ass(n1)},Nom,,0,0,0,,{{\\pos(70,{yn})\\fad(200,200)}}" + txt)
     G = serie.groupes([m for m in mots if m["debut"] < fin_clips])
     for gi, g in enumerate(G):
         g_fin = min(G[gi + 1][0]["debut"] if gi + 1 < len(G) else g[-1]["fin"] + 0.35, g[-1]["fin"] + 0.45, fin_clips - 0.4)

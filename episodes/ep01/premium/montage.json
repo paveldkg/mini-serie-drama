@@ -2,19 +2,112 @@
   "dossier": "/home/user/films/cle-de-trop",
   "accent": "#FF3130",
   "sous_titres_hauteur": 0.68,
-  "titres_hauteur": 0.20,
+  "titres_hauteur": 0.2,
   "clips": [
-    {"id": "C1", "fichier": "c1.mp4", "debut": 0, "fin": 5.0, "titre": "Qui dormait ici ?", "lignes": ["Quelqu'un a dormi ici."]},
-    {"id": "C2", "fichier": "c2.mp4", "debut": 0, "fin": 8.0, "titre": "Plus tôt…", "lignes": ["Bienvenue, Mademoiselle Mangue !", "Wouah… Ça, c'est du premium."]},
-    {"id": "C3", "fichier": "c3.mp4", "debut": 0, "fin": 7.0, "lignes": ["Grand frigo, la clim… tout est prêt pour toi.", "Propre. J'approuve."]},
-    {"id": "C4", "fichier": "c4.mp4", "debut": 0, "fin": 10.0, "lignes": ["Une chambre avec balcon ? Je reste !", "Bana… c'est quoi, ça ?", "Une feuille d'ananas… Il est parti, pourtant !"]},
-    {"id": "C5", "fichier": "c5.mp4", "debut": 0, "fin": 10.0, "lignes": ["Certaines clés… ne se rendent jamais.", "J'ai la seule clé… non ?"],
-     "etalonnage": [{"de": 5.9, "a": 10.1, "type": "nuit"}]}
+    {
+      "id": "C1",
+      "fichier": "c1b.mp4",
+      "debut": 0,
+      "fin": 5.0,
+      "titre": "Qui dormait ici ?",
+      "lignes": [
+        "Quelqu'un a dormi ici."
+      ]
+    },
+    {
+      "id": "C2",
+      "fichier": "c2b.mp4",
+      "debut": 0,
+      "fin": 9.0,
+      "titre": "Plus tôt…",
+      "lignes": [
+        "Bienvenue ! Voici votre clé… Monsieur Ananas l'a rendue ce matin.",
+        "Wouah… Ça, c'est du premium !"
+      ],
+      "noms": [
+        {
+          "texte": "Bana · la concierge",
+          "de": 0.3,
+          "a": 2.6
+        },
+        {
+          "texte": "Mademoiselle Mangue · la cliente",
+          "de": 5.1,
+          "a": 7.6
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "fichier": "c3.mp4",
+      "debut": 0,
+      "fin": 7.0,
+      "lignes": [
+        "Grand frigo, la clim… tout est prêt pour toi.",
+        "Propre. J'approuve."
+      ]
+    },
+    {
+      "id": "C4",
+      "fichier": "c4b.mp4",
+      "debut": 0,
+      "fin": 10.0,
+      "lignes": [
+        "Une chambre avec balcon ? Je reste !",
+        "Une feuille d'ananas… dans mon lit ?",
+        "Impossible… il est parti ce matin !"
+      ]
+    },
+    {
+      "id": "C5",
+      "fichier": "c5b.mp4",
+      "debut": 0,
+      "fin": 10.0,
+      "lignes": [
+        "J'ai rendu une clé… mais j'en avais deux.",
+        "Une deuxième clé… ?"
+      ],
+      "etalonnage": [],
+      "noms": [
+        {
+          "texte": "Monsieur Ananas · l'ancien client",
+          "de": 0.4,
+          "a": 3.4
+        }
+      ]
+    }
   ],
-  "carte": {"image": "carte-finale-premium.png", "duree": 4.0, "voix": "E13.wav", "voix_decalage": 0.35},
-  "musique": {"fichier": "theme-serie.mp3", "gain_db": -6, "segments": [
-    {"debut_film": 5.0, "source": 0.0, "duree": 18.6, "fondu_sortie": 0.12},
-    {"debut_film": 30.0, "source": 19.5, "duree": 9.6, "fondu_entree": 0.6, "fondu_sortie": 0.5},
-    {"debut_film": 40.0, "source": 36.0, "duree": 4.0, "fondu_entree": 0.3, "fondu_sortie": 0.05}
-  ]}
+  "carte": {
+    "image": "carte-finale-premium.png",
+    "duree": 4.0,
+    "voix": "E13.wav",
+    "voix_decalage": 0.35
+  },
+  "musique": {
+    "fichier": "theme-serie.mp3",
+    "gain_db": -6,
+    "segments": [
+      {
+        "debut_film": 5.0,
+        "source": 0.0,
+        "duree": 19.6,
+        "fondu_sortie": 0.12
+      },
+      {
+        "debut_film": 31.0,
+        "source": 19.5,
+        "duree": 9.6,
+        "fondu_entree": 0.6,
+        "fondu_sortie": 0.5
+      },
+      {
+        "debut_film": 41.0,
+        "source": 36.0,
+        "duree": 4.0,
+        "fondu_entree": 0.3,
+        "fondu_sortie": 0.05
+      }
+    ]
+  },
+  "noms_hauteur": 0.3
 }
