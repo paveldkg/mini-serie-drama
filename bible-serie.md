@@ -22,7 +22,7 @@
 - Caractère : Chaleureuse, rapide, un peu commère, rassurante mais vite paniquée.
 - Façon de parler : Confidences chuchotées (« Psst… »), phrases courtes, humour léger. Signature : « Chez DKG, rien ne m'échappe… enfin, presque. »
 - Apparence (prompt figé) : Banane jaune mûre, petites taches brunes, gilet de concierge bleu marine, épingle clé dorée, trousseau de clés doré. Voir prompts/personnages.md.
-- Voix :  (elevenlabs_v4 (Eleven v4, français natif), voice_id , réglages {}) — statut a_choisir par Pavel a l'ecoute
+- Voix : Elena (elevenlabs_v4, voice_id ca83ca7f-c186-493d-bd69-0d765fa861b2, réglages {}) — statut figee (choisie le 2026-11-06, Pavel : « le meilleur, le plus humain »)
 - Image de référence : à générer
 
 ### Mademoiselle Mangue — mangue
@@ -30,7 +30,7 @@
 - Caractère : Glamour, exigeante, théâtrale, un brin snob, vulnérable quand elle a peur.
 - Façon de parler : Posée, dramatique, appuie les mots. Signature : « Je ne dors que dans le premium, chérie. »
 - Apparence (prompt figé) : Mangue dégradée vert-orange-rouge, longs cils, lunettes de soleil sur la tête, foulard wax orange et turquoise, petite valise crème. Voir prompts/personnages.md.
-- Voix :  (elevenlabs_v4 (Eleven v4, français natif), voice_id , réglages {}) — statut a_choisir par Pavel a l'ecoute
+- Voix : Sloane (elevenlabs_v4, voice_id b57b22a0-f287-405b-bc82-6f08f5e6bb1f, réglages {}) — statut figee (choisie le 2026-11-06, Pavel : « le meilleur, le plus humain »)
 - Image de référence : à générer
 
 ### Monsieur Ananas — ananas
@@ -38,7 +38,7 @@
 - Caractère : Élégant, énigmatique, ambigu (ni méchant ni gentil jusqu'à la révélation).
 - Façon de parler : Grave, lent, velouté, presque chuchoté. Signature : « Certaines clés… ne se rendent jamais. »
 - Apparence (prompt figé) : Ananas, couronne verte en pointes, yeux dorés en amande, demi-sourire, blazer anthracite, fine chaîne dorée, vieille clé en laiton. Voir prompts/personnages.md.
-- Voix :  (elevenlabs_v4 (Eleven v4, français natif), voice_id , réglages {}) — statut a_choisir par Pavel a l'ecoute
+- Voix : Caspian (elevenlabs_v4, voice_id ef70cc83-3015-4bad-9359-0ea968c43ec0, réglages {}) — statut figee (choisie le 2026-11-06, Pavel : « le meilleur, le plus humain »)
 - Image de référence : à générer
 
 ### Petit Safou — safou (prune africaine)
@@ -46,7 +46,7 @@
 - Caractère : Espiègle, énergique, fait les découvertes et les gaffes. Rendu premium, pas enfantin (jeune adulte, pas un enfant).
 - Façon de parler : Vif, aigu, rires espiègles. Signature : « Indice numéro un ! »
 - Apparence (prompt figé) : Petit safou violet foncé brillant, mini trench beige, loupe. Voir prompts/personnages.md.
-- Voix :  (seed_audio, voice_id , réglages {}) — statut a_choisir (épisode 2)
+- Voix :  (seed_audio, voice_id , réglages {}) — statut a_choisir (épisode 2, casting Eleven v4)
 - Image de référence : à générer
 
 ## Lieux (décors réels DKG)

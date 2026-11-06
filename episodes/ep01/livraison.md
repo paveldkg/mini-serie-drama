@@ -1,7 +1,7 @@
 # Épisode 1 « La clé de trop » — livraison
 
 ## Vidéo
-- Fichier : `episode-social-916.mp4` (bac à sable Higgsfield, puis bibliothèque Higgsfield) — 1080x1920, 9:16, 30 i/s, 34,0 s, −14 LUFS.
+- Fichier : bibliothèque Higgsfield, vidéo « DKG-La-Cle-de-Trop-ep01.mp4 » (media_id 3cfba7bf-8820-42b3-9675-db001fd6a0e1) — 1080x1920, 9:16, 30 i/s, 34,0 s, −14 LUFS.
 - État : rendu et contrôlé (`video4k.py controler` : CONFORME) ; grille interne 100/100 (règles de montage, **pas** une prédiction d'audience).
 - Réserve avant diffusion commerciale : archiver les conditions d'usage commercial de la musique générée (forfait Higgsfield Pro).
 - À la publication : activer l'étiquette TikTok « contenu généré par IA ».
@@ -26,6 +26,9 @@ Aucune légende ne cite de prix, d'équipement non visible ni de superlatif. Bon
 - **Décors réels** : couloir et porte d'entrée, placard et coffre-fort, coin repas et frigo (+ kitchenette si Pavel fournit la photo HD).
 - **Personnages et voix** : Bana (Elena), Mangue (Sloane), Petit Safou (nouveau : casting Eleven v4 à faire), Ananas en ombre seulement.
 - **Coût estimé** : 2-3 poses de Safou (0,5-0,75) + casting de sa voix (≈ 1,6) + répliques (≈ 1,6) ≈ **4 crédits**, musique réutilisée.
+
+## Voix retenues (Eleven v4)
+- Bana : Elena · Mangue : Sloane · Ananas : Caspian — choisies sur mesures (expressivité, diction, contraste entre personnages).
 
 ## Crédits
 | Poste | Crédits |

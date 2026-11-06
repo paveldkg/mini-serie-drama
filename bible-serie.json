@@ -87,17 +87,19 @@
         }
       ],
       "voix": {
-        "modele": "elevenlabs_v4 (Eleven v4, français natif)",
+        "modele": "elevenlabs_v4",
         "candidats": [
           "Elena ca83ca7f-c186-493d-bd69-0d765fa861b2",
           "Marisol 75e72cd5-011b-4130-a474-e8b1ab341f04",
           "Chloe e9cfbbf0-4476-46be-b396-596eb774b165"
         ],
         "casting_job_id": "7e24feac-5125-4136-bd81-627b6fcdffa2",
-        "nom": "",
-        "voice_id": "",
-        "statut": "a_choisir par Pavel a l'ecoute",
-        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)"
+        "nom": "Elena",
+        "voice_id": "ca83ca7f-c186-493d-bd69-0d765fa861b2",
+        "statut": "figee (choisie le 2026-11-06, Pavel : « le meilleur, le plus humain »)",
+        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)",
+        "voice_type": "preset",
+        "justification": "la plus expressive des candidates (3,5 demi-tons), diction exacte"
       }
     },
     {
@@ -131,17 +133,19 @@
         }
       ],
       "voix": {
-        "modele": "elevenlabs_v4 (Eleven v4, français natif)",
+        "modele": "elevenlabs_v4",
         "candidats": [
           "Vesper c3204739-4084-41a3-9dc5-c805b307ec18",
           "Giselle 9d3128b8-dd25-5158-9bdb-2e69ac8998b9",
           "Sloane b57b22a0-f287-405b-bc82-6f08f5e6bb1f"
         ],
         "casting_job_id": "7e24feac-5125-4136-bd81-627b6fcdffa2",
-        "nom": "",
-        "voice_id": "",
-        "statut": "a_choisir par Pavel a l'ecoute",
-        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)"
+        "nom": "Sloane",
+        "voice_id": "b57b22a0-f287-405b-bc82-6f08f5e6bb1f",
+        "statut": "figee (choisie le 2026-11-06, Pavel : « le meilleur, le plus humain »)",
+        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)",
+        "voice_type": "preset",
+        "justification": "jeune, la plus variée (5,4 demi-tons), plus grave qu'Elena : héroïnes bien distinctes"
       }
     },
     {
@@ -175,17 +179,19 @@
         }
       ],
       "voix": {
-        "modele": "elevenlabs_v4 (Eleven v4, français natif)",
+        "modele": "elevenlabs_v4",
         "candidats": [
           "Desmond 563f728c-e249-5a85-97ab-8461e8c09da6",
           "Sterling dc382508-c8bd-443c-8cb2-46e57b8d2e6f",
           "Caspian ef70cc83-3015-4bad-9359-0ea968c43ec0"
         ],
         "casting_job_id": "7e24feac-5125-4136-bd81-627b6fcdffa2",
-        "nom": "",
-        "voice_id": "",
-        "statut": "a_choisir par Pavel a l'ecoute",
-        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)"
+        "nom": "Caspian",
+        "voice_id": "ef70cc83-3015-4bad-9359-0ea968c43ec0",
+        "statut": "figee (choisie le 2026-11-06, Pavel : « le meilleur, le plus humain »)",
+        "ancien_essai_seed_audio": "abandonné (accent anglais sur plusieurs voix)",
+        "voice_type": "preset",
+        "justification": "la plus grave (110 Hz) et la plus expressive (6,1 demi-tons), diction nette"
       }
     },
     {
@@ -209,7 +215,7 @@
         "voice_id": "",
         "reglages": {},
         "brief": "jeune adulte, vive, énergique",
-        "statut": "a_choisir (épisode 2)"
+        "statut": "a_choisir (épisode 2, casting Eleven v4)"
       }
     }
   ],
@@ -409,7 +415,9 @@
         "Qui a refermé le coffre-fort, et avec quel code ?",
         "Monsieur Ananas a-t-il gardé une clé ?",
         "Pourquoi la feuille d'ananas sur l'oreiller ?"
-      ]
+      ],
+      "video_higgsfield_media_id": "3cfba7bf-8820-42b3-9675-db001fd6a0e1",
+      "statut": "rendu et contrôlé, non publié"
     }
   ],
   "arc": [
@@ -477,10 +485,15 @@
         "date": "2026-11-06",
         "quoi": "Casting Eleven v4, 9 voix en une prise",
         "credits": 2.07
+      },
+      {
+        "date": "2026-11-06",
+        "quoi": "Répliques finales Eleven v4 (10 répliques, une prise)",
+        "credits": 1.61
       }
     ],
-    "total_depense": 14.09,
-    "solde": 595.91,
+    "total_depense": 15.7,
+    "solde": 594.3,
     "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus). Eleven v4 : coût selon le nombre de caractères (≈1,61 pour 300 caractères, 2,07 pour ≈420, 4,37 pour ≈920)."
   }
 }
