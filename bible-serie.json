@@ -214,12 +214,16 @@
       },
       "poses_sans_fond": [],
       "voix": {
-        "nom": "",
-        "modele": "seed_audio",
-        "voice_id": "",
-        "reglages": {},
-        "brief": "jeune adulte, vive, énergique",
-        "statut": "a_choisir (épisode 2, casting Eleven v4)"
+        "modele": "elevenlabs_v4",
+        "nom": "Benji",
+        "voice_id": "e6f9b893-51b1-51d3-afe9-9e0482cb7ac1",
+        "voice_type": "preset",
+        "statut": "proposee, à valider à l'écoute par Pavel",
+        "echantillon_media_id": "d42b740b-806b-40d2-b73b-cb8e3990e90b",
+        "casting_job_id": "6e067b45-3b1b-458d-83b0-17a015064b4e",
+        "mesures": "Benji F0 145 Hz, variation 4,7 demi-tons, diction « Safou » correcte ; Evan 196 Hz, 3,7, dit « Safout » ; Cody incompatible avec Eleven v4",
+        "alternative": "Evan f7a46aa0-183a-5327-b554-e71d8c0071bb (job 2b146a4c-61ae-4419-a876-16cc79ee1126)",
+        "regle": "adulte de petite taille (arrive à l'épaule des autres), jamais un enfant"
       }
     }
   ],
@@ -469,7 +473,8 @@
     {
       "numero": 2,
       "titre": "Qui frappe ?",
-      "pitch": "C'est Petit Safou ; le coffre-fort a été refermé avec un code inconnu."
+      "pitch": "Petit Safou frappe et enquête. Mangue : le coffre contient le collier de sa mère. Bana avoue avoir laissé une clé à Ananas parce qu'il avait l'air seul. Il revient à minuit (23 h 52).",
+      "statut": "scénario écrit (episodes/ep02/scenario.md), plans en attente de crédits"
     },
     {
       "numero": 3,
@@ -489,7 +494,7 @@
     {
       "numero": 6,
       "titre": "La vérité",
-      "pitch": "Ananas a tant aimé son séjour qu'il a voulu revenir."
+      "pitch": "Ananas était seul : pourquoi cette chambre comptait pour lui, et ce que contenait vraiment le coffre."
     },
     {
       "numero": 7,
@@ -539,11 +544,16 @@
         "date": "2026-11-06",
         "quoi": "Version premium v2 : 4 plans refaits + reprise de l'indice + couronne d'ananas + réplique Eleven v4",
         "credits": 308.48
+      },
+      {
+        "date": "2026-11-07",
+        "quoi": "Épisode 2 : 3 images de test + casting de la voix de Safou",
+        "credits": 1.21
       }
     ],
-    "total_depense": 604.18,
-    "solde": 5.82,
-    "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus). Eleven v4 : coût selon le nombre de caractères (≈1,61 pour 300 caractères, 2,07 pour ≈420, 4,37 pour ≈920)."
+    "total_depense": 605.39,
+    "solde": 4.61,
+    "lecon": "seed_audio : get_cost annonce 0,2 mais la facturation réelle dépend de la longueur (0,3 pour ~3-4,5 s, 0,4 pour ~5 s et plus). Eleven v4 : coût selon le nombre de caractères (≈1,61 pour 300 caractères, 2,07 pour ≈420, 4,37 pour ≈920). Épisode 2 : tester le cadrage par images à 0,25 crédit avant toute vidéo (économie de reprises à 49-70 crédits)."
   },
   "production_premium": {
     "modele": "seedance_2_5, mode omni_reference, generate_audio, 720p, 9:16",

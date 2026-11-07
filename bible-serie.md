@@ -49,7 +49,7 @@
 - Caractère : Espiègle, énergique, fait les découvertes et les gaffes. Rendu premium, pas enfantin (jeune adulte, pas un enfant).
 - Façon de parler : Vif, aigu, rires espiègles. Signature : « Indice numéro un ! »
 - Apparence (prompt figé) : Petit safou violet foncé brillant, mini trench beige, loupe. Voir prompts/personnages.md.
-- Voix :  (seed_audio, voice_id , réglages {}) — statut a_choisir (épisode 2, casting Eleven v4)
+- Voix : Benji (elevenlabs_v4, voice_id e6f9b893-51b1-51d3-afe9-9e0482cb7ac1, réglages {}) — statut proposee, à valider à l'écoute par Pavel
 - Image de référence : à générer
 
 ## Lieux (décors réels DKG)
